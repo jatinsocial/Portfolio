@@ -1,11 +1,8 @@
-// A mark is drawn over a crop; all values are pixels of the source screenshot (1512 x 771).
+// A mark is drawn over a crop; all values are page pixels of the legacy inbox as seen in a 1512 x 771 window.
 export type Mark = { x: number; y: number; w: number; h: number; label?: string; dashed?: boolean };
 
-// A crop of a screenshot: the region to show, plus outlines drawn on it.
+// A pre-cropped screenshot (captured at 2x) of the page region x, y, w, h, plus outlines drawn on it.
 export type Crop = { src: string; alt: string; x: number; y: number; w: number; h: number; marks: Mark[] };
-
-export const SHOT_W = 1512;
-export const SHOT_H = 771;
 
 export type ProblemGroup = {
   title: string;
@@ -72,12 +69,12 @@ export const caseStudies: CaseStudy[] = [
               {
                 title: "No way to handle reviews in bulk",
                 text: "There is no way to select several reviews and act on them together. For the cafe owner, a day of mixed reviews means opening every card and replying one by one.",
-                crop: { src: "/case/reviews-inbox/legacy-inbox.jpg", alt: "The toolbar above the review list, with no way to select reviews", x: 600, y: 100, w: 890, h: 260, marks: [{ x: 975, y: 112, w: 512, h: 40, dashed: true, label: "No way to select reviews" }] },
+                crop: { src: "/case/reviews-inbox/p1-bulk.png", alt: "The toolbar above the review list, with no way to select reviews", x: 600, y: 100, w: 890, h: 260, marks: [{ x: 975, y: 112, w: 512, h: 40, dashed: true, label: "No way to select reviews" }] },
               },
               {
                 title: "Nothing is prioritised",
                 text: "A review that does not recommend looks just like one that does. Nothing tells the owner which review needs attention first.",
-                crop: { src: "/case/reviews-inbox/legacy-inbox.jpg", alt: "Two review cards with the same weight whether they recommend or not", x: 800, y: 246, w: 690, h: 430, marks: [{ x: 1345, y: 258, w: 132, h: 32 }, { x: 1382, y: 621, w: 95, h: 32 }] },
+                crop: { src: "/case/reviews-inbox/p2-priority.png", alt: "Two review cards with the same weight whether they recommend or not", x: 800, y: 246, w: 690, h: 430, marks: [{ x: 1345, y: 258, w: 132, h: 32 }, { x: 1382, y: 621, w: 95, h: 32 }] },
               },
             ],
           },
@@ -87,12 +84,12 @@ export const caseStudies: CaseStudy[] = [
               {
                 title: "The reply field is always open",
                 text: "Every card carries an open reply box, even when the review already has a reply. It adds height to every review and pushes the next one off the screen.",
-                crop: { src: "/case/reviews-inbox/legacy-inbox.jpg", alt: "A review card with an empty reply box open under the review", x: 363, y: 300, w: 1127, h: 290, marks: [{ x: 379, y: 391, w: 1093, h: 102 }] },
+                crop: { src: "/case/reviews-inbox/p3-reply-open.png", alt: "A review card with an empty reply box open under the review", x: 363, y: 300, w: 1127, h: 290, marks: [{ x: 379, y: 391, w: 1093, h: 102 }] },
               },
               {
                 title: "No way to see if a review was replied to",
                 text: "Once the field is closed, nothing on the card says whether the review has been replied to.",
-                crop: { src: "/case/reviews-inbox/legacy-inbox.jpg", alt: "The top of a review card with no replied status", x: 363, y: 246, w: 1127, h: 140, marks: [{ x: 640, y: 256, w: 660, h: 40, dashed: true, label: "No replied status" }] },
+                crop: { src: "/case/reviews-inbox/p4-replied-status.png", alt: "The top of a review card with no replied status", x: 363, y: 246, w: 1127, h: 140, marks: [{ x: 640, y: 256, w: 660, h: 40, dashed: true, label: "No replied status" }] },
               },
             ],
           },
@@ -102,17 +99,17 @@ export const caseStudies: CaseStudy[] = [
               {
                 title: "Filtering is hard",
                 text: "Users have struggled to filter out replied reviews. The filter is a small two-pane popup with 39 tags in a short scroll box, and the numbers at the top do not filter anything.",
-                crop: { src: "/case/reviews-inbox/legacy-filter.jpg", alt: "The filter popup, with Reply Status as the fifth item in a side list", x: 560, y: 100, w: 560, h: 460, marks: [{ x: 570, y: 344, w: 140, h: 24 }] },
+                crop: { src: "/case/reviews-inbox/p5-filter.png", alt: "The filter popup, with Reply Status as the fifth item in a side list", x: 560, y: 100, w: 560, h: 460, marks: [{ x: 567, y: 340, w: 143, h: 32 }] },
               },
               {
                 title: "Reply options are buried",
                 text: "Templates and AI are bare icons with the lowest weight in the composer. After generating a reply, Regenerate, Shorten, Expand, Fix Grammar and Change Tone all sit behind a single icon.",
-                crop: { src: "/case/reviews-inbox/legacy-ai-menu.jpg", alt: "The AI options menu that opens from a single icon in the reply box", x: 363, y: 390, w: 560, h: 330, marks: [{ x: 545, y: 450, w: 36, h: 36 }, { x: 543, y: 487, w: 158, h: 220 }] },
+                crop: { src: "/case/reviews-inbox/p6-ai-menu.png", alt: "The AI options menu that opens from a single icon in the reply box", x: 363, y: 390, w: 560, h: 330, marks: [{ x: 545, y: 450, w: 36, h: 36 }, { x: 543, y: 487, w: 158, h: 220 }] },
               },
               {
                 title: "No nudge to save a template",
                 text: "Paste a reply written elsewhere and nothing suggests saving it as a template, so good replies get written once and lost.",
-                crop: { src: "/case/reviews-inbox/legacy-inbox.jpg", alt: "The reply box, with nothing offering to save a reply as a template", x: 363, y: 380, w: 1127, h: 130, marks: [{ x: 379, y: 391, w: 1093, h: 102, dashed: true, label: "Nothing offers to save a template" }] },
+                crop: { src: "/case/reviews-inbox/p7-template.png", alt: "The reply box, with nothing offering to save a reply as a template", x: 363, y: 380, w: 1127, h: 130, marks: [{ x: 379, y: 391, w: 1093, h: 102, dashed: true, label: "Nothing offers to save a template" }] },
               },
             ],
           },

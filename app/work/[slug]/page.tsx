@@ -4,21 +4,15 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Nav from "@/components/Nav";
 import Reveal from "@/components/Reveal";
-import { caseStudies, getCaseStudy, SHOT_H, SHOT_W, type Crop } from "@/lib/case-studies";
+import { caseStudies, getCaseStudy, type Crop } from "@/lib/case-studies";
 
 // Shows one region of a screenshot with outlines drawn on it (all positions come from the source pixels).
 function CropView({ c }: { c: Crop }) {
   const pct = (v: number, of: number) => `${(v / of) * 100}%`;
   return (
     <div className="crop" role="img" aria-label={c.alt} style={{ aspectRatio: `${c.w} / ${c.h}` }}>
-      <div
-        className="crop-img"
-        style={{
-          backgroundImage: `url(${c.src})`,
-          backgroundSize: `${(SHOT_W / c.w) * 100}% auto`,
-          backgroundPosition: `${(c.x / (SHOT_W - c.w)) * 100}% ${(c.y / (SHOT_H - c.h)) * 100}%`,
-        }}
-      />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img className="crop-img" src={c.src} alt="" />
       {c.marks.map((m, i) => (
         <span
           key={i}
