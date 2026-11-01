@@ -13,7 +13,7 @@ export const journey: Stage[] = [
     text: "I joined SocialPilot as a UI/UX Intern, and this is where it all began.",
   },
   {
-    label: "Analytics",
+    label: "Taking ownership",
     title: "Associate",
     text: "I took full ownership of Analytics at SocialPilot, starting with Competitor Reports.",
     items: [
