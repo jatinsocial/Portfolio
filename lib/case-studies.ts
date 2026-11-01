@@ -79,8 +79,6 @@ export const caseStudies: CaseStudy[] = [
                 x: 363, y: 100, w: 1127, h: 500,
                 callouts: [
                   { title: "No bulk actions", text: "Reviews are handled one at a time.", ax: 1150, ay: 132 },
-                  { title: "Stats that do nothing", text: "The tiles don't filter the list.", ax: 1300, ay: 200, cy: 250, g: 2 },
-                  { title: "No priority", text: "A bad review looks like a good one.", ax: 1480, ay: 274, cy: 400 },
                 ],
               },
             ],
