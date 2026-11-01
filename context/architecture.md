@@ -25,7 +25,8 @@ portfolio/
   lib/
     projects.ts          the five projects (title, slug, description with **bold**)
     journey.ts           the journey stages and item cards
-    case-studies.ts      case study copy per project slug (sections with paragraphs)
+    case-studies.ts      case study copy per project slug (sections: paragraphs, optional heading, annotated figures, problem groups)
+  public/case/<slug>/    case study screenshots (2x PNGs captured from the legacy product)
   package.json           scripts: dev (3100), build, start
 ```
 

@@ -57,3 +57,6 @@ Accent colors used on purpose: purple `#6d4aff` (Work chip), `#6938ef` (selectio
 
 ## Dark mode
 Follows `prefers-color-scheme`. There is no manual toggle (the reference has one; deliberately skipped for now, see `tasks.md`).
+
+## Case study annotations (2026-11-01)
+Problems are shown on real screenshots of the legacy product: screenshot on the left (about 68% wide), thin purple elbow lines out to short notes on the right, a purple ring dot where each line starts, a chevron at the note. Each note is a bold 2-4 word title and one line (about 40 characters). Notes stack under the screenshot below 860px. Group headings are plain; the section title uses the selection-frame block (`SelHeading`). Numbered pins, one-crop-per-problem outlines and notes on the left were tried and rejected. Screenshots are 2x captures, with browser-extension widgets (Grammarly, support chat) hidden.

@@ -22,3 +22,6 @@ Inspiration only. Take structure and interaction; never copy copy, photos, illus
 ## Tool notes
 - Emulating a 1440px viewport makes some Framer sites render incorrectly; use the pane's normal width or real mouse scroll to inspect them.
 - Screenshots do not capture the mouse cursor.
+
+## Annotated "old design" screenshots (2026-11-01)
+Jatin shared a Medium/UX Planet case study (Unacademy polls) where a large screenshot sits beside short notes joined by thin leader lines. Take: the layout and the idea of very few words per problem. Do not take: its copy, imagery or its green styling; ours is purple with our own copy and screenshots.

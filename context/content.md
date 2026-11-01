@@ -35,18 +35,22 @@ Pending alternate (Jatin chose this direction but has not supplied the details):
 ## Placeholders currently on the page
 Polaroid portrait, Resume link, LinkedIn link, project screens, project descriptions, hero paragraph, philosophy quote, journey item notes, journey stage 3 title ("SocialPilot's second product").
 
-## Reviews Inbox case study (from Jatin's brief)
-Product: SocialPilot Reviews is a review and online reputation management platform for local businesses and multi-location brands (collect, manage, market reviews at scale, e.g. Google Business Profile). Problem framing: a coffee-shop owner at SBR, Ahmedabad drowning in scattered reviews; the legacy inbox is a bottleneck; the redesign turns a passive, cluttered feed into a high-velocity operational workspace ("chaos to resolution"). Copy is Jatin's, only typos fixed. No metrics given.
+## Reviews Inbox case study (`lib/case-studies.ts`, route `/work/reviews-inbox`)
+Copy for "About the product" and "Defining the problem" is Jatin's brief (typos fixed only). Product: SocialPilot Reviews, a review and online reputation management platform for local businesses and multi-location brands. Framing: a coffee-shop owner at SBR, Ahmedabad, drowning in scattered reviews; the redesign turns a passive, cluttered feed into a high-velocity workspace ("chaos to resolution"). No metrics given. The new inbox is not in development yet, so there are no outcomes: the closing section must state goals, not results.
 
-### Legacy problems (validated with Jatin)
-Bulk handling is the primary problem (a missing capability). Others: no prioritisation; reply field always open; no replied/pending state once closed; filtering (users have struggled to filter out replied reviews, per Jatin; source not yet given); reply options (AI/templates) are icon-only and generated options sit behind a dropdown; no nudge to save a pasted reply as a template. Dropped on Jatin's request: breadcrumb/location switcher, tagging modal, thin source/customer detail, reply `...` menu. The case study has no outcomes: the new inbox is not in development yet, so the closing section must use goals, not results.
+### Legacy problems currently on the page (validated with Jatin, 2026-11-01)
+Title block: "What the legacy inbox gets [wrong]". Notes are a bold 2-4 word title plus one short line, shown on annotated screenshots (screenshot left, notes right):
+- Top: **Two reviews fill the screen** ("The third is out of sight.")
+- Nothing built for scale: **No bulk actions** ("Reviews are handled one at a time."). Bulk handling is the headline problem (a missing capability).
+- Space and status: **Always open** ("Even when a reply already exists."); **No replied status** ("The header never says replied or pending."). In the demo account every review already has a reply, so a collapsed card still shows the reply block; only the header lacks a status.
+- Slow, hidden tools: **Too many clicks to find replied** ("Filter, Reply Status, option, Apply."; the path is verified, 4 clicks minimum, but no number is stated on the page); **Easy-to-miss reply tools** ("Templates and AI are just icons."); **One icon hides every AI tool** (Regenerate, Shorten, Expand, Fix Grammar, Change Tone behind one sparkle icon).
+- The claim that users struggle to filter replied reviews is Jatin's; its source (tickets, calls) is not recorded.
 
-Update: on the page, the "no nudge to save a pasted reply as a template" problem was removed from the legacy section by Jatin (2026-11-01); keep it out of the legacy list unless he asks for it back.
+### Removed on Jatin's request (do not bring back unless he asks)
+Breadcrumb/location switcher, tagging modal, thin source/customer detail, reply `...` menu, "no nudge to save a pasted reply as a template", "Stats that do nothing", "No priority" (nothing prioritised), "39 tags, one tiny list".
 
-Update: "Stats that do nothing" (non-filtering stat tiles) and "No priority" were removed from the legacy section by Jatin (2026-11-01). Legacy list now: no bulk actions; nothing says replied; always open; easy-to-miss reply tools; 39 tags in one tiny list; replied filter buried; AI tools behind one icon.
+### Still to write
+What I learned (real research only), design principles, key decisions (needs the new design), What's next (goals only).
 
-Update: "39 tags, one tiny list" removed from the legacy section (2026-11-01). Legacy list now: no bulk actions; nothing says replied; always open; easy-to-miss reply tools; replied filter buried; AI tools behind one icon.
-
-Update: filter note is now "Too many clicks to find replied" (steps: Filter, Reply Status, option, Apply). Do not state a click number unless verified in the product.
-
-Update (2026-11-01): legacy notes are now: No bulk actions; Always open; Two reviews fill the screen; No replied status (header never says replied or pending; in this demo account every review has a reply, so a collapsed card still shows the reply block below, only the header has no status); Too many clicks to find replied (Filter, Reply Status, option, Apply); Easy-to-miss reply tools; One icon hides every AI tool.
+## About-paragraph ending
+"...quietly clear for the people who rely on them every day." (changed from "the teams who run social every day").

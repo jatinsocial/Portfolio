@@ -3,9 +3,11 @@
 Last updated: 2026-11-01. Move items between sections as status changes; never delete, so the history stays readable.
 
 ## Ongoing
-- Reviews Inbox case study: intro, product and problem sections are in. Problems section is in. Waiting on Jatin for the new design (screens/Figma), the source for the filtering claim, and sections 4-7 (learnings, principles, key decisions, what's next). No outcomes exist yet (not in dev). Other four case studies not started.
+- Reviews Inbox case study: sections 1-3 done (About the product, Defining the problem, What the legacy inbox gets wrong with annotated screenshots). Next: What I learned, design principles, key decisions (needs Jatin's new design), What's next (goals only; the new inbox is not in dev). Other four case studies not started.
 
 ## Waiting on Jatin (input needed)
+- [ ] New inbox design (screenshots, or a Figma link after authorising the Figma connector in `/mcp`) to write the key decisions.
+- [ ] Any real research or feedback for "What I learned", and the source of the claim that users struggle to filter replied reviews.
 - [ ] Black-and-white portrait photo for the polaroid.
 - [ ] Resume link (PDF or URL) and LinkedIn URL.
 - [ ] Project details and screenshots for all five projects, then build case study pages.
@@ -17,6 +19,7 @@ Last updated: 2026-11-01. Move items between sections as status changes; never d
 
 ## Pending / ideas (not started, not rejected)
 - [ ] Legacy screenshot shows demo-account reviewer names (e.g. Kelvin Italiya); decide whether to blur them before publishing the repo.
+- [ ] Cover image for the Reviews Inbox case study (still a "Cover screens coming soon" placeholder).
 - [ ] Case study pages for the other four projects (route + data pattern exists: add an entry to `lib/case-studies.ts`).
 - [ ] Decide whether Bulk Edit gets its own project card (it only appears in the journey).
 - [ ] Decide whether AI Lab needs more journey cards once Jatin shares details.
