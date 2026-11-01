@@ -13,7 +13,7 @@ export const journey: Stage[] = [
   },
   {
     title: "Associate",
-    text: "Analytics became mine, and Competitor Reports was where it started.",
+    text: "I owned Analytics, from Competitor Reports to Bulk Edit, a first of its kind in social media management.",
     items: [
       {
         name: "Competitor Reports",
