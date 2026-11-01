@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import Nav from "@/components/Nav";
 import Reveal from "@/components/Reveal";
 import { journey } from "@/lib/journey";
+import { getCaseStudy } from "@/lib/case-studies";
 import { projects } from "@/lib/projects";
 
 // Turns **word** markers in a description into <strong>.
@@ -44,13 +45,15 @@ export default function Home() {
             </h2>
           </Reveal>
 
-          {projects.map((p) => (
+          {projects.map((p) => {
+            const href = getCaseStudy(p.slug) ? `/work/${p.slug}` : `#${p.slug}`;
+            return (
             <Reveal key={p.slug}>
               <article id={p.slug} className="project">
                 <h3>{p.title}</h3>
                 <p>{renderBold(p.description)}</p>
 
-                <a href={`#${p.slug}`} className="case-card" aria-label={`${p.title} case study`}>
+                <a href={href} className="case-card" aria-label={`${p.title} case study`}>
                   <div className="zoom">
                     <div className="screen screen-a" />
                     <div className="screen screen-b" />
@@ -59,11 +62,12 @@ export default function Home() {
                 </a>
 
                 <div className="project-cta">
-                  <a href={`#${p.slug}`} className="pill-link">View case study →</a>
+                  <a href={href} className="pill-link">View case study →</a>
                 </div>
               </article>
             </Reveal>
-          ))}
+            );
+          })}
         </section>
 
         <section className="quote">

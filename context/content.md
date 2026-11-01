@@ -34,3 +34,6 @@ Pending alternate (Jatin chose this direction but has not supplied the details):
 
 ## Placeholders currently on the page
 Polaroid portrait, Resume link, LinkedIn link, project screens, project descriptions, hero paragraph, philosophy quote, journey item notes, journey stage 3 title ("SocialPilot's second product").
+
+## Reviews Inbox case study (from Jatin's brief)
+Product: SocialPilot Reviews is a review and online reputation management platform for local businesses and multi-location brands (collect, manage, market reviews at scale, e.g. Google Business Profile). Problem framing: a coffee-shop owner at SBR, Ahmedabad drowning in scattered reviews; the legacy inbox is a bottleneck; the redesign turns a passive, cluttered feed into a high-velocity operational workspace ("chaos to resolution"). Copy is Jatin's, only typos fixed. No metrics given.

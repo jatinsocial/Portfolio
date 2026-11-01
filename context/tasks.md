@@ -3,7 +3,7 @@
 Last updated: 2026-11-01. Move items between sections as status changes; never delete, so the history stays readable.
 
 ## Ongoing
-- None actively in progress. Next likely work: case study pages (blocked on Jatin's material, see below).
+- Reviews Inbox case study: intro, product and problem sections are in. Waiting on Jatin for the next sections (research, process, solution, outcomes) and screens. Other four case studies not started.
 
 ## Waiting on Jatin (input needed)
 - [ ] Black-and-white portrait photo for the polaroid.
@@ -16,7 +16,7 @@ Last updated: 2026-11-01. Move items between sections as status changes; never d
 - [ ] Confirm the email address is OK to show publicly.
 
 ## Pending / ideas (not started, not rejected)
-- [ ] Case study pages (route per project, replace in-page anchors).
+- [ ] Case study pages for the other four projects (route + data pattern exists: add an entry to `lib/case-studies.ts`).
 - [ ] Decide whether Bulk Edit gets its own project card (it only appears in the journey).
 - [ ] Decide whether AI Lab needs more journey cards once Jatin shares details.
 - [ ] Push to GitHub (`https://github.com/jatinsocial/Portfolio.git`, public, empty). **Jatin said no to pushing for now (2026-11-01); do not push until he says yes.** Local repo exists with one commit (`efebd43`), remote `origin` is added. Before any push, raise: the repo is public and the commit includes `context/` (work email, career notes) and the git author email is jatin.solanki@group.one.

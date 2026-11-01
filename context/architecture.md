@@ -20,9 +20,11 @@ portfolio/
     Nav.tsx              client: floating pill nav, IST clock, greeting toast, mobile menu
     Hero.tsx             client: two-column hero, cycling greeting, polaroid + cursor tag
     Reveal.tsx           client: scroll-in reveal wrapper
+  app/work/[slug]/page.tsx  case study page (static params from case-studies.ts)
   lib/
     projects.ts          the five projects (title, slug, description with **bold**)
     journey.ts           the journey stages and item cards
+    case-studies.ts      case study copy per project slug (sections with paragraphs)
   package.json           scripts: dev (3100), build, start
 ```
 
@@ -44,5 +46,5 @@ portfolio/
 
 ## Known limits
 - Local git repo on `main` with one commit; remote `origin` points to `https://github.com/jatinsocial/Portfolio.git` but **nothing has been pushed** (Jatin declined for now). No deployment configured (Vercel is the likely target).
-- Case study pages do not exist; "View case study" links are in-page anchors.
+- Only Reviews Inbox has a case study page (`/work/reviews-inbox`); the other projects' links are still in-page anchors until they get an entry in `lib/case-studies.ts`.
 - Images and logos are placeholders (polaroid portrait, project screens).

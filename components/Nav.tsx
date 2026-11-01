@@ -3,9 +3,9 @@
 import { useEffect, useState } from "react";
 
 const links = [
-  { href: "#about", label: "About" },
-  { href: "#work", label: "Work" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#about", label: "About" },
+  { href: "/#work", label: "Work" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 function greeting(h: number) {
@@ -49,7 +49,7 @@ export default function Nav() {
     <header className="pill-wrap">
       <div className="pill">
         <div className="pill-left">
-          <a href="#top" className="pill-logo" aria-label="Home">JS</a>
+          <a href="/" className="pill-logo" aria-label="Home">JS</a>
           <span className="pill-time" aria-label="Time in India">
             {time || "--:--"} <small>IST</small>
           </span>
@@ -68,7 +68,7 @@ export default function Nav() {
           >
             <span /><span /><span />
           </button>
-          <a href="#contact" className="pill-cta">Get in touch</a>
+          <a href="/#contact" className="pill-cta">Get in touch</a>
         </div>
       </div>
 
