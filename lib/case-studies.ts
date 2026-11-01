@@ -94,9 +94,8 @@ export const caseStudies: CaseStudy[] = [
                 x: 363, y: 246, w: 887, h: 434,
                 callouts: [
                   { title: "Nothing says replied", text: "Close the field, and no sign remains.", ax: 1000, ay: 300 },
-                  { title: "No template nudge", text: "Nothing offers to save a reply.", ax: 700, ay: 411 },
                   { title: "Always open", text: "Even when a reply already exists.", ax: 1100, ay: 440, cy: 525, g: 2 },
-                  { title: "Icons, no labels", text: "AI and templates get the least weight.", ax: 563, ay: 466, cy: 650, g: 0.5 },
+                  { title: "Easy-to-miss reply tools", text: "Templates and AI are just icons.", ax: 563, ay: 466, cy: 650, g: 0.5 },
                 ],
               },
             ],
