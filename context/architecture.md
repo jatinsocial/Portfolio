@@ -1,0 +1,48 @@
+# Architecture
+
+Last updated: 2026-11-01
+
+## Stack
+Next.js 15 (App Router), React 19, TypeScript, plain CSS. No UI or animation libraries. Dev port 3100.
+
+## File map
+
+```
+portfolio/
+  AGENTS.md              rules and direction (source of truth)
+  CLAUDE.md              redirects to AGENTS.md
+  context/               living project memory (this folder)
+  app/
+    layout.tsx           fonts (Instrument Serif, Caveat), metadata
+    page.tsx             page composition: Nav, Hero, About, Work, Quote, Journey, Contact, Footer
+    globals.css          ALL styles, tokens, dark mode, responsive rules
+  components/
+    Nav.tsx              client: floating pill nav, IST clock, greeting toast, mobile menu
+    Hero.tsx             client: two-column hero, cycling greeting, polaroid + cursor tag
+    Reveal.tsx           client: scroll-in reveal wrapper
+  lib/
+    projects.ts          the five projects (title, slug, description with **bold**)
+    journey.ts           the journey stages and item cards
+  package.json           scripts: dev (3100), build, start
+```
+
+## How the page is built
+
+- `page.tsx` is a server component. It maps over `projects` and `journey` to render Work and Journey. A tiny `renderBold()` helper turns `**word**` in descriptions into `<strong>`.
+- Interactivity is limited to three client components (Nav, Hero, Reveal).
+- Section titles for Work and Journey share the `.work-heading` class; the Journey word uses the `.sel` selection-frame styles.
+- Styles are one global stylesheet organized by comment headers: tokens, cursor, nav, hero, buttons, sections, work heading, projects, journey, quote/contact/footer, reveal, media queries, reduced motion.
+
+## Data flow
+
+`lib/*.ts` (copy) -> `app/page.tsx` (render) -> `globals.css` (look). No API calls, no database. The IST clock and greeting are computed in the browser (`Intl.DateTimeFormat`, timezone `Asia/Kolkata`).
+
+## Breakpoints
+- `max-width: 859px`: hero becomes one column, polaroid moves to top, text centers.
+- `max-width: 767px`: project cards go 4:3, nav links collapse into the menu button.
+- Nav links show from `min-width: 768px`.
+
+## Known limits
+- Not a git repository yet. No deployment configured (Vercel is the likely target).
+- Case study pages do not exist; "View case study" links are in-page anchors.
+- Images and logos are placeholders (polaroid portrait, company chips, project screens).

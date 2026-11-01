@@ -1,0 +1,42 @@
+# Components and sections
+
+Last updated: 2026-11-01. Each entry: what it is, behavior, where the code is, status.
+
+## Nav — `components/Nav.tsx`
+- Floating white pill, fixed at 20px from top, `width: min(720px, 100%)`, 60px tall, frosted glass.
+- Left: "JS" monogram + time chip showing live IST (`Asia/Kolkata`, 24h, updates every 15s).
+- Center (>=768px): About, Work, Contact. Below 768px these move into a menu button that opens a small sheet.
+- Right: dark "Get in touch" pill linking to `#contact`.
+- Greeting toast below the pill: "Good morning/afternoon/evening! Thanks for stopping by." Shows after 1.2s, hides after 9s.
+- Not built: weather chip, light/dark toggle (both exist on the reference).
+
+## Hero — `components/Hero.tsx`
+- Two-column grid (stacks below 860px, polaroid first, text centered).
+- Left: serif-italic greeting cycling Hello, Namaste, Bonjour, Hola (2.6s); "I am Jatin Solanki" + waving 👋; "Product Designer at [S] SocialPilot" chip; paragraph with an "AI Lab" chip; buttons "Say hi 👋" (soft gray, links `#contact`) and "Resume 📄" (dark, link is `#` placeholder). Buttons 228x56px.
+- Right: white polaroid (340px, rotate 6deg) with a gray placeholder "JS" photo and handwritten caption `me_01.jpeg`; floating sky-blue arrow cursor with a "Jatin Solanki" tag overlapping the photo's left edge.
+- Placeholders: portrait (swap `.polaroid-photo` for an `<img>`, black and white suits it), company chip icons ("S", "AI"), Resume link.
+
+## Reveal — `components/Reveal.tsx`
+Wraps content; adds `.in` once when 15% visible. Optional `delay` (ms).
+
+## About — `#about` in `app/page.tsx`
+Centered paragraph, large secondary-color text (1.25-1.75rem). Current copy came from research of designer portfolios (see `content.md`). A more personal alternate is waiting on Jatin's origin story and hobbies.
+
+## Work — `#work`
+- **Heading**: "Work" (bordered box) "that I'm" "extremely" (purple chip, `❖ Main component` tag above) "proud of" (orange). Same size as the Journey title.
+- **Project block** (one per entry in `lib/projects.ts`): title, description (`**bold**` markers become `<strong>`), a `.case-card` link (2:1, flat `--bg-2` surface, two empty screen frames, "Screens coming soon" label) whose `.zoom` layer scales to 1.06 on hover, then a centered "View case study →" pill. 1px divider between blocks.
+- No category labels, badges, tabs or gradients.
+
+## Philosophy quote — `.quote`
+Label "Philosophy" and a serif-italic placeholder line: "Make it obvious first. Then make it delightful." Placeholder written by the agent; awaiting Jatin's own line.
+
+## Journey — `#journey`
+- **Heading**: "How it all" + "started" inside a purple selection frame (2px border, four `+` corner marks), a pen-nib cursor at the word's end and a drifting black arrow cursor below it. Both cursors are hand-drawn SVGs.
+- **Timeline** (`lib/journey.ts`): vertical 1px line, dot per stage, label, title, text, optional item cards (`--bg-2`, 16px radius). The last stage has a filled purple dot with a soft ring.
+- Stages: UI/UX Intern; Associate (Competitor Reports, Bulk Edit); SocialPilot's second product / Reviews (Reviews Inbox, AI Reports, AI Onboarding); SocialPilot AI Lab (label "Now").
+
+## Contact — `#contact`
+Centered "Let's talk." title and a dark "Say hello" button (`mailto:jatin.solanki@group.one`).
+
+## Footer
+Email and LinkedIn links (LinkedIn is a `#` placeholder), "India · © 2026 Jatin Solanki".
