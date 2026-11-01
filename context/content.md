@@ -9,6 +9,7 @@ Rule: only facts Jatin has stated go on the page. Everything else is a placehold
 - Email shown: jatin.solanki@group.one (from his account email; confirm he wants it public).
 - SocialPilot was recently acquired. His message said "acquired by SocialPilot" (likely a typo); the acquirer is unconfirmed. Page says only "SocialPilot".
 - Career: joined SocialPilot as a **UI/UX Intern**, then **Associate**, taking full ownership of **Analytics** starting with **Competitor Reports**; also designed **Bulk Edit**, described as a first of its kind in the social media management domain, letting teams manage content at scale. Then moved to SocialPilot's second product, **Reviews**: started with the **Inbox**, then **AI reports**, then **AI onboarding**. Now working on **SocialPilot AI Lab**, an agentic platform layer for the SocialPilot product suite.
+- **Analytics and Bulk Edit are two different things.** Bulk Edit is not part of Analytics; do not write copy that implies it is (e.g. "from Competitor Reports to Bulk Edit"). Competitor Reports belongs to Analytics; Bulk Edit is a separate feature he designed in the same period.
 - No dates, metrics, awards or years of experience provided.
 
 ## Projects (in page order) — `lib/projects.ts`
