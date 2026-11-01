@@ -1,16 +1,23 @@
-export type Pin = { n: number; x: number; y: number }; // x, y in % of the image
+// A mark is drawn over a crop; all values are pixels of the source screenshot (1512 x 771).
+export type Mark = { x: number; y: number; w: number; h: number; label?: string; dashed?: boolean };
+
+// A crop of a screenshot: the region to show, plus outlines drawn on it.
+export type Crop = { src: string; alt: string; x: number; y: number; w: number; h: number; marks: Mark[] };
+
+export const SHOT_W = 1512;
+export const SHOT_H = 771;
 
 export type ProblemGroup = {
   title: string;
-  items: { n: number; title: string; text: string }[];
+  items: { title: string; text: string; crop: Crop }[];
 };
 
 export type CaseSection = {
   id: string;
   title: string;
   paragraphs: string[];
-  // Annotated screenshot with numbered pins, shown above the groups.
-  figure?: { src: string; alt: string; caption: string; width: number; height: number; pins: Pin[] };
+  // Plain screenshot shown above the groups.
+  figure?: { src: string; alt: string; caption: string; width: number; height: number };
   groups?: ProblemGroup[];
 };
 
@@ -53,33 +60,24 @@ export const caseStudies: CaseStudy[] = [
         ],
         figure: {
           src: "/case/reviews-inbox/legacy-inbox.jpg",
-          alt: "The legacy Reviews Inbox with seven numbered problem markers",
+          alt: "The legacy Reviews Inbox",
           caption: "The legacy Reviews Inbox, shown with a demo account.",
           width: 1512,
           height: 771,
-          pins: [
-            { n: 1, x: 76.1, y: 17.1 },
-            { n: 2, x: 88.3, y: 35.5 },
-            { n: 3, x: 66.1, y: 55.8 },
-            { n: 4, x: 89.3, y: 47.1 },
-            { n: 5, x: 65.5, y: 17.1 },
-            { n: 6, x: 40.3, y: 60.4 },
-            { n: 7, x: 45, y: 53.3 },
-          ],
         },
         groups: [
           {
             title: "Nothing built for scale",
             items: [
               {
-                n: 1,
                 title: "No way to handle reviews in bulk",
                 text: "There is no way to select several reviews and act on them together. For the cafe owner, a day of mixed reviews means opening every card and replying one by one.",
+                crop: { src: "/case/reviews-inbox/legacy-inbox.jpg", alt: "The toolbar above the review list, with no way to select reviews", x: 600, y: 100, w: 890, h: 260, marks: [{ x: 975, y: 112, w: 512, h: 40, dashed: true, label: "No way to select reviews" }] },
               },
               {
-                n: 2,
                 title: "Nothing is prioritised",
                 text: "A review that does not recommend looks just like one that does. Nothing tells the owner which review needs attention first.",
+                crop: { src: "/case/reviews-inbox/legacy-inbox.jpg", alt: "Two review cards with the same weight whether they recommend or not", x: 800, y: 246, w: 690, h: 430, marks: [{ x: 1345, y: 258, w: 132, h: 32 }, { x: 1382, y: 621, w: 95, h: 32 }] },
               },
             ],
           },
@@ -87,14 +85,14 @@ export const caseStudies: CaseStudy[] = [
             title: "Space and status",
             items: [
               {
-                n: 3,
                 title: "The reply field is always open",
                 text: "Every card carries an open reply box, even when the review already has a reply. It adds height to every review and pushes the next one off the screen.",
+                crop: { src: "/case/reviews-inbox/legacy-inbox.jpg", alt: "A review card with an empty reply box open under the review", x: 363, y: 300, w: 1127, h: 290, marks: [{ x: 379, y: 391, w: 1093, h: 102 }] },
               },
               {
-                n: 4,
                 title: "No way to see if a review was replied to",
                 text: "Once the field is closed, nothing on the card says whether the review has been replied to.",
+                crop: { src: "/case/reviews-inbox/legacy-inbox.jpg", alt: "The top of a review card with no replied status", x: 363, y: 246, w: 1127, h: 140, marks: [{ x: 640, y: 256, w: 660, h: 40, dashed: true, label: "No replied status" }] },
               },
             ],
           },
@@ -102,19 +100,19 @@ export const caseStudies: CaseStudy[] = [
             title: "Slow, hidden tools",
             items: [
               {
-                n: 5,
                 title: "Filtering is hard",
                 text: "Users have struggled to filter out replied reviews. The filter is a small two-pane popup with 39 tags in a short scroll box, and the numbers at the top do not filter anything.",
+                crop: { src: "/case/reviews-inbox/legacy-filter.jpg", alt: "The filter popup, with Reply Status as the fifth item in a side list", x: 560, y: 100, w: 560, h: 460, marks: [{ x: 570, y: 344, w: 140, h: 24 }] },
               },
               {
-                n: 6,
                 title: "Reply options are buried",
-                text: "Templates and AI are bare icons with the lowest weight in the composer. After generating a reply, the options sit behind a dropdown.",
+                text: "Templates and AI are bare icons with the lowest weight in the composer. After generating a reply, Regenerate, Shorten, Expand, Fix Grammar and Change Tone all sit behind a single icon.",
+                crop: { src: "/case/reviews-inbox/legacy-ai-menu.jpg", alt: "The AI options menu that opens from a single icon in the reply box", x: 363, y: 390, w: 560, h: 330, marks: [{ x: 545, y: 450, w: 36, h: 36 }, { x: 543, y: 487, w: 158, h: 220 }] },
               },
               {
-                n: 7,
                 title: "No nudge to save a template",
                 text: "Paste a reply written elsewhere and nothing suggests saving it as a template, so good replies get written once and lost.",
+                crop: { src: "/case/reviews-inbox/legacy-inbox.jpg", alt: "The reply box, with nothing offering to save a reply as a template", x: 363, y: 380, w: 1127, h: 130, marks: [{ x: 379, y: 391, w: 1093, h: 102, dashed: true, label: "Nothing offers to save a template" }] },
               },
             ],
           },

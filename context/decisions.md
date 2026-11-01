@@ -19,3 +19,6 @@ Newest at the bottom. Format: date, decision, why. Record reversals too.
 - **2026-11-01 — Project moved** to `~/Downloads/Jatin/portfolio`. Other project folders in the home directory were deliberately left in place so their preview configs keep working.
 - **2026-11-01 — Git identity**: the repo is on Jatin's personal GitHub (`jatinsocial`), but commits were first authored with his work email, so GitHub credited his other account (`designwithjatin`) and listed Claude as a co-author. Decision: per-repo identity = his GitHub noreply email (GitHub "Keep my email private" turned on), no co-author trailers, global git email left as group.one so work repos are unaffected. History rewritten locally; needs one force-push.
 - **2026-11-01 — Docs structure**: `AGENTS.md` is the source of truth, `CLAUDE.md` redirects to it, `context/` holds living project memory and must be updated every session.
+
+## 2026-11-01 — Case study problems: crops, not numbered pins
+Chose one zoomed crop per problem with an outline over seven numbered pins on one screenshot. Pins were small, far from their text and hard to match; crops put each problem next to its evidence. Rejected: pins, and labels floating around one big screenshot.

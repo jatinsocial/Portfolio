@@ -4,7 +4,38 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Nav from "@/components/Nav";
 import Reveal from "@/components/Reveal";
-import { caseStudies, getCaseStudy } from "@/lib/case-studies";
+import { caseStudies, getCaseStudy, SHOT_H, SHOT_W, type Crop } from "@/lib/case-studies";
+
+// Shows one region of a screenshot with outlines drawn on it (all positions come from the source pixels).
+function CropView({ c }: { c: Crop }) {
+  const pct = (v: number, of: number) => `${(v / of) * 100}%`;
+  return (
+    <div className="crop" role="img" aria-label={c.alt} style={{ aspectRatio: `${c.w} / ${c.h}` }}>
+      <div
+        className="crop-img"
+        style={{
+          backgroundImage: `url(${c.src})`,
+          backgroundSize: `${(SHOT_W / c.w) * 100}% auto`,
+          backgroundPosition: `${(c.x / (SHOT_W - c.w)) * 100}% ${(c.y / (SHOT_H - c.h)) * 100}%`,
+        }}
+      />
+      {c.marks.map((m, i) => (
+        <span
+          key={i}
+          className={`mark${m.dashed ? " dashed" : ""}`}
+          style={{
+            left: pct(m.x - c.x, c.w),
+            top: pct(m.y - c.y, c.h),
+            width: pct(m.w, c.w),
+            height: pct(m.h, c.h),
+          }}
+        >
+          {m.label && <em>{m.label}</em>}
+        </span>
+      ))}
+    </div>
+  );
+}
 
 export function generateStaticParams() {
   return caseStudies.map((c) => ({ slug: c.slug }));
@@ -51,11 +82,6 @@ export default async function CaseStudyPage({
                 <figure className="case-figure">
                   <div className="case-shot">
                     <Image src={s.figure.src} alt={s.figure.alt} width={s.figure.width} height={s.figure.height} />
-                    {s.figure.pins.map((pin) => (
-                      <span key={pin.n} className="pin" style={{ left: `${pin.x}%`, top: `${pin.y}%` }}>
-                        {pin.n}
-                      </span>
-                    ))}
                   </div>
                   <figcaption>{s.figure.caption}</figcaption>
                 </figure>
@@ -64,17 +90,17 @@ export default async function CaseStudyPage({
               {s.groups?.map((g) => (
                 <div key={g.title} className="problem-group">
                   <h3>{g.title}</h3>
-                  <ol>
+                  <ul>
                     {g.items.map((it) => (
-                      <li key={it.n}>
-                        <span className="pin pin-static">{it.n}</span>
-                        <div>
+                      <li key={it.title}>
+                        <div className="problem-text">
                           <h4>{it.title}</h4>
                           <p>{it.text}</p>
                         </div>
+                        <CropView c={it.crop} />
                       </li>
                     ))}
-                  </ol>
+                  </ul>
                 </div>
               ))}
             </section>
