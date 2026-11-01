@@ -337,10 +337,6 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .case-section p { max-width: 760px; margin-top: 16px; font-size: 1.0625rem; line-height: 1.7; color: var(--text-2); }
 
 /* Legacy screenshot and problem rows: each problem sits next to a zoomed crop with an outline */
-.case-figure { margin-top: 40px; }
-.case-shot { border-radius: 20px; overflow: hidden; border: 1px solid var(--border); }
-.case-shot img { display: block; width: 100%; height: auto; }
-.case-figure figcaption { margin-top: 12px; font-size: 0.8125rem; color: var(--text-2); }
 .problem-group { margin-top: 64px; }
 .problem-group h3 { font-size: 1.0625rem; font-weight: 600; letter-spacing: -0.01em; padding-bottom: 12px; border-bottom: 1px solid var(--border); margin-bottom: 8px; }
 
@@ -372,3 +368,6 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   .anno[data-side="right"] .callout::before { left: 3px; transform: rotate(45deg); }
   .anno[data-side="left"] .callout::before { right: 3px; transform: rotate(-135deg); }
 }
+
+/* Selection-frame heading inside a case study: smaller gap below, text follows */
+.case-section .work-heading { margin-bottom: 24px; }

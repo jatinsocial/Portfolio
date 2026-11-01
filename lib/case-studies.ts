@@ -26,8 +26,8 @@ export type CaseSection = {
   id: string;
   title: string;
   paragraphs: string[];
-  // Plain screenshot shown above the groups.
-  figure?: { src: string; alt: string; caption: string; width: number; height: number };
+  // Shows the title as a large heading with one word in a selection frame (lead + word).
+  heading?: { lead: string; word: string };
   groups?: ProblemGroup[];
 };
 
@@ -68,13 +68,7 @@ export const caseStudies: CaseStudy[] = [
         paragraphs: [
           "I used the legacy inbox the way an owner would, and the problems fall into three groups.",
         ],
-        figure: {
-          src: "/case/reviews-inbox/legacy-inbox.jpg",
-          alt: "The legacy Reviews Inbox",
-          caption: "The legacy Reviews Inbox, shown with a demo account.",
-          width: 1512,
-          height: 771,
-        },
+        heading: { lead: "What the legacy inbox gets", word: "wrong" },
         groups: [
           {
             title: "Nothing built for scale",

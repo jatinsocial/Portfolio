@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Nav from "@/components/Nav";
 import Reveal from "@/components/Reveal";
+import SelHeading from "@/components/SelHeading";
 import type { CSSProperties } from "react";
 import { caseStudies, getCaseStudy, type Figure } from "@/lib/case-studies";
 
@@ -97,19 +97,10 @@ export default async function CaseStudyPage({
         {c.sections.map((s) => (
           <Reveal key={s.id}>
             <section id={s.id} className="case-section">
-              <h2>{s.title}</h2>
+              {s.heading ? <SelHeading lead={s.heading.lead} word={s.heading.word} /> : <h2>{s.title}</h2>}
               {s.paragraphs.map((p, i) => (
                 <p key={i}>{p}</p>
               ))}
-
-              {s.figure && (
-                <figure className="case-figure">
-                  <div className="case-shot">
-                    <Image src={s.figure.src} alt={s.figure.alt} width={s.figure.width} height={s.figure.height} />
-                  </div>
-                  <figcaption>{s.figure.caption}</figcaption>
-                </figure>
-              )}
 
               {s.groups?.map((g) => (
                 <div key={g.title} className="problem-group">

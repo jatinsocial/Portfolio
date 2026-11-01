@@ -20,6 +20,7 @@ portfolio/
     Nav.tsx              client: floating pill nav, IST clock, greeting toast, mobile menu
     Hero.tsx             client: two-column hero, cycling greeting, polaroid + cursor tag
     Reveal.tsx           client: scroll-in reveal wrapper
+    SelHeading.tsx       selection-frame title block (Journey, case study)
   app/work/[slug]/page.tsx  case study page (static params from case-studies.ts)
   lib/
     projects.ts          the five projects (title, slug, description with **bold**)
