@@ -104,11 +104,11 @@ export default function Home() {
           <ol className="timeline">
             {journey.map((s, i) => (
               <li
-                key={s.label}
-                className={`stage ${i === journey.length - 1 ? "latest" : ""}`}
+                key={s.title}
+                className={`stage ${i === journey.length - 1 ? "latest" : ""} ${s.label ? "" : "plain"}`}
               >
                 <Reveal>
-                  <span className="stage-label">{s.label}</span>
+                  {s.label && <span className="stage-label">{s.label}</span>}
                   <h3>{s.title}</h3>
                   <p>{s.text}</p>
                   {s.items && (

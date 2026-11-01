@@ -33,7 +33,7 @@ Label "Philosophy" and a serif-italic placeholder line: "Make it obvious first. 
 ## Journey — `#journey`
 - **Heading**: "How it all" + "started" inside a purple selection frame (2px border, four `+` corner marks), a pen-tool nib on the frame's bottom-right corner, offset outside the word so the text stays readable (orange nib pointing up-left with hole and slit, plus a separate small oval, dark outline, as in the reference). Hand-drawn SVG, `0.8em` so it scales with the title. There is deliberately no decorative arrow cursor: the only arrow on the site is the real mouse pointer (see Cursor in `design-direction.md`).
 - **Timeline** (`lib/journey.ts`): vertical 1px line, dot per stage, label, title, text, optional item cards (`--bg-2`, 16px radius). The last stage has a filled purple dot with a soft ring.
-- Stages: UI/UX Intern; Associate (Competitor Reports, Bulk Edit); SocialPilot's second product / Reviews (Reviews Inbox, AI Reports, AI Onboarding); SocialPilot AI Lab (label "Now").
+- Stages: UI/UX Intern; Associate (Competitor Reports, Bulk Edit); SocialPilot's second product (Reviews Inbox, AI Reports, AI Onboarding); SocialPilot AI Lab. Labels are optional (`label?` in `lib/journey.ts`): only the last stage has one ("Now"); the others were removed on request and use the `.plain` class so the dot aligns with the title.
 
 ## Contact — `#contact`
 Centered "Let's talk." title and a dark "Say hello" button (`mailto:jatin.solanki@group.one`).

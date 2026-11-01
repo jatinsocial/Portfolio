@@ -275,6 +275,8 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; }
   border-radius: 50%; background: var(--bg); border: 2px solid var(--text-2);
 }
 .stage.latest::before { background: #6d4aff; border-color: #6d4aff; box-shadow: 0 0 0 5px rgba(109, 74, 255, 0.16); }
+.stage.plain::before { top: 11px; }
+.stage.plain h3 { margin-top: 0; }
 .stage-label { display: block; font-size: 0.8125rem; font-weight: 500; color: var(--text-2); }
 .stage h3 { margin-top: 4px; font-size: clamp(1.4rem, 2.4vw, 1.75rem); font-weight: 600; letter-spacing: -0.02em; line-height: 1.25; }
 .stage p { margin-top: 8px; max-width: 720px; color: var(--text-2); font-size: 1rem; line-height: 1.65; }

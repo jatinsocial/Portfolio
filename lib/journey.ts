@@ -1,5 +1,5 @@
 export type Stage = {
-  label: string;
+  label?: string;
   title: string;
   text: string;
   items?: { name: string; note: string }[];
@@ -8,14 +8,12 @@ export type Stage = {
 // Stages as told by Jatin. No dates yet; add a `period` field when they're confirmed.
 export const journey: Stage[] = [
   {
-    label: "Where it started",
     title: "UI/UX Intern",
     text: "I joined SocialPilot as a UI/UX Intern, and this is where it all began.",
   },
   {
-    label: "Taking ownership",
     title: "Associate",
-    text: "I took full ownership of Analytics at SocialPilot, starting with Competitor Reports.",
+    text: "Analytics became mine, and Competitor Reports was where it started.",
     items: [
       {
         name: "Competitor Reports",
@@ -28,7 +26,6 @@ export const journey: Stage[] = [
     ],
   },
   {
-    label: "Reviews",
     title: "SocialPilot's second product",
     text: "I moved to Reviews, the second product in the SocialPilot suite, and started with the Inbox.",
     items: [
