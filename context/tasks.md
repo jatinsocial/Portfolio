@@ -21,6 +21,8 @@ Last updated: 2026-11-01. Move items between sections as status changes; never d
 - [ ] Decide whether Bulk Edit gets its own project card (it only appears in the journey).
 - [ ] Decide whether AI Lab needs more journey cards once Jatin shares details.
 - [ ] Push to GitHub (`https://github.com/jatinsocial/Portfolio.git`, public, empty). **Jatin said no to pushing for now (2026-11-01); do not push until he says yes.** Local repo exists with one commit (`efebd43`), remote `origin` is added. Before any push, raise: the repo is public and the commit includes `context/` (work email, career notes) and the git author email is jatin.solanki@group.one.
+- [ ] **Force-push needed** (Jatin does it in GitHub Desktop): the repo was already pushed once with the group.one author email and a Claude co-author line. Local history was rewritten (noreply author, no co-author) on 2026-11-01, so GitHub Desktop will offer "Force push origin". Safe because the repo is brand new.
+- [ ] Decide what to do with the stray folder `portfolio/Portfolio Site/` (a separate git repo, probably created by GitHub Desktop at 08:35; contains only `.gitattributes`). Not part of the project and deliberately not committed. Ask Jatin before deleting or ignoring it.
 - [ ] Deployment (Vercel likely).
 - [ ] Verify section titles at a real 1440px desktop width (title size is an estimate of 56px).
 
