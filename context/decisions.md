@@ -31,3 +31,6 @@ All figures keep the screenshot on the left and notes on the right (Jatin's call
 
 ## 2026-11-01 — Template nudge is an opportunity, not a legacy problem
 Jatin removed "no nudge to save a template" from the legacy problems because it was never in the problem statement; it came from the PM's customer conversations (sheets and outside AI) plus PostHog sessions (people pasting a reply and being done). It now lives in "What we noticed" as an idea, and will return in key decisions. Same for bulk reply: not in the original problem statement, found by observing people handle many reviews by hand.
+
+## 2026-11-01 — AI Lab moves to the end of Work
+Order is now Reviews Inbox, Competitor Reports, AI in Location Reports, AI Onboarding, SocialPilot AI Lab. Jatin's reason: the AI Lab product is unfinished. The Journey still ends on AI Lab ("Now"), which is separate from the Work order.

@@ -14,10 +14,10 @@ Rule: only facts Jatin has stated go on the page. Everything else is a placehold
 
 ## Projects (in page order) — `lib/projects.ts`
 1. Reviews Inbox Revamp
-2. SocialPilot AI Lab
-3. Competitor Reports
-4. AI in Location Reports
-5. AI Onboarding for Reviews
+2. Competitor Reports
+3. AI in Location Reports
+4. AI Onboarding for Reviews
+5. SocialPilot AI Lab (last: the product is unfinished)
 
 Descriptions are agent-written placeholders based only on the facts above. Jatin should rewrite them in his voice.
 

@@ -14,12 +14,6 @@ export const projects: Project[] = [
       "A calmer way for teams to **read, triage and reply** to every review from every location, in one place.",
   },
   {
-    slug: "ai-lab",
-    title: "SocialPilot AI Lab",
-    description:
-      "An **agentic platform layer** for SocialPilot's product suite, turning what a marketer intends into work that gets done across reports, reviews and publishing.",
-  },
-  {
     slug: "competitor-reports",
     title: "Competitor Reports",
     description:
@@ -36,5 +30,11 @@ export const projects: Project[] = [
     title: "AI Onboarding for Reviews",
     description:
       "An onboarding flow where AI gets a new reviews customer from **connecting an account to their first reply** in minutes.",
+  },
+  {
+    slug: "ai-lab",
+    title: "SocialPilot AI Lab",
+    description:
+      "An **agentic platform layer** for SocialPilot's product suite, turning what a marketer intends into work that gets done across reports, reviews and publishing.",
   },
 ];

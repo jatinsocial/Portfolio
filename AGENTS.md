@@ -65,7 +65,7 @@ Full specs: [`context/components.md`](context/components.md). Summary:
 Full detail and current copy: [`context/content.md`](context/content.md).
 
 - Copy lives in `lib/projects.ts` and `lib/journey.ts`. Edit there, not inline.
-- Project order is fixed: Reviews Inbox Revamp, SocialPilot AI Lab, Competitor Reports, AI in Location Reports, AI Onboarding for Reviews.
+- Project order is fixed: Reviews Inbox Revamp, Competitor Reports, AI in Location Reports, AI Onboarding for Reviews, SocialPilot AI Lab (last because the product is unfinished).
 - Journey stages: UI/UX Intern, Associate (owned Analytics: Competitor Reports, Bulk Edit), Reviews (Inbox, AI Reports, AI Onboarding), AI Lab ("Now").
 - **Never invent facts**: no metrics, awards, dates, years of experience or claims Jatin has not given. Use clearly marked placeholders and log them in `context/tasks.md`.
 - Voice: first person, plain, specific, warm. Avoid clichés ("passionate", "user-centered", "high-impact", "interfaces that feel obvious").
