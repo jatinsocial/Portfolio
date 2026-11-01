@@ -42,4 +42,4 @@ Centered "Let's talk." title and a dark "Say hello" button (`mailto:jatin.solank
 Email and LinkedIn links (LinkedIn is a `#` placeholder), "India · © 2026 Jatin Solanki".
 
 ## Case study page — `app/work/[slug]/page.tsx`
-Narrow 760px column: back link, title (same size as section titles), intro, flat 2:1 cover placeholder, then sections (h2 + paragraphs, revealed on scroll) from `lib/case-studies.ts`. Unknown slugs 404. Work cards link here only when a case study exists. Nav anchors are `/#…` so they work on sub-pages. Layout is a first pass; screens and richer blocks come with Jatin's material.
+1080px container with 24px side padding (same as home page sections, so left and right edges line up); body text capped at 760px for readability. Back link, title (same size as section titles), intro, flat 2:1 cover placeholder, then sections (h2 + paragraphs, revealed on scroll) from `lib/case-studies.ts`. Unknown slugs 404. Work cards link here only when a case study exists. Nav anchors are `/#…` so they work on sub-pages. Layout is a first pass; screens and richer blocks come with Jatin's material.

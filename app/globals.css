@@ -323,15 +323,15 @@ blockquote { max-width: 760px; margin: 0 auto; font-size: clamp(1.75rem, 4vw, 3r
 a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 8px; }
 
 /* Case study page */
-.case { max-width: 760px; margin: 0 auto; padding: 128px 24px 96px; }
+.case { max-width: 1080px; margin: 0 auto; padding: 128px 24px 96px; }
 .case-back { display: inline-block; font-size: 0.9rem; color: var(--text-2); transition: color 0.3s; }
 .case-back:hover { color: var(--text); }
 .case-title { margin-top: 32px; font-size: clamp(2rem, 4.6vw, 3.5rem); font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; }
-.case-intro { margin-top: 16px; font-size: clamp(1.1rem, 2vw, 1.35rem); line-height: 1.5; color: var(--text-2); }
+.case-intro { max-width: 760px; margin-top: 16px; font-size: clamp(1.1rem, 2vw, 1.35rem); line-height: 1.5; color: var(--text-2); }
 .case-visual {
   position: relative; margin-top: 48px; aspect-ratio: 2 / 1; border-radius: 24px; background: var(--bg-2);
   display: flex; align-items: center; justify-content: center;
 }
 .case-section { margin-top: 72px; }
 .case-section h2 { font-size: clamp(1.4rem, 2.4vw, 1.75rem); font-weight: 600; letter-spacing: -0.02em; line-height: 1.25; }
-.case-section p { margin-top: 16px; font-size: 1.0625rem; line-height: 1.7; color: var(--text-2); }
+.case-section p { max-width: 760px; margin-top: 16px; font-size: 1.0625rem; line-height: 1.7; color: var(--text-2); }
