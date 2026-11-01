@@ -75,7 +75,7 @@ Full detail and current copy: [`context/content.md`](context/content.md).
 - Match the references' **structure and interactions**, not their content or assets.
 - When a request is ambiguous and the answer changes the work, ask once; otherwise pick the sensible default and say so.
 - Verify visual changes in the browser before saying they are done. Screenshots do not show the cursor; check it with computed styles.
-- **Git**: this folder is not yet a git repo. When it becomes one, never push without asking Jatin first. Jatin does not run git himself; the agent does, but always confirms before pushing.
+- **Git**: local repo on `main`, remote `origin` = `https://github.com/jatinsocial/Portfolio.git` (public). **Nothing has been pushed and Jatin has said no for now: never push without a clear yes from him.** Jatin does not run git himself; the agent does, but always confirms before pushing.
 - Do not edit `~/.claude/launch.json` or other global config without asking.
 
 ## 8. Context upkeep (mandatory)

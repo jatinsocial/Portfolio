@@ -20,7 +20,8 @@ Last updated: 2026-11-01. Move items between sections as status changes; never d
 - [ ] Case study pages (route per project, replace in-page anchors).
 - [ ] Decide whether Bulk Edit gets its own project card (it only appears in the journey).
 - [ ] Decide whether AI Lab needs more journey cards once Jatin shares details.
-- [ ] Git repo setup and deployment (Vercel likely). Always ask before pushing.
+- [ ] Push to GitHub (`https://github.com/jatinsocial/Portfolio.git`, public, empty). **Jatin said no to pushing for now (2026-11-01); do not push until he says yes.** Local repo exists with one commit (`efebd43`), remote `origin` is added. Before any push, raise: the repo is public and the commit includes `context/` (work email, career notes) and the git author email is jatin.solanki@group.one.
+- [ ] Deployment (Vercel likely).
 - [ ] Verify section titles at a real 1440px desktop width (title size is an estimate of 56px).
 
 ## On hold
