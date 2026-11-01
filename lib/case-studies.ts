@@ -150,8 +150,7 @@ export const caseStudies: CaseStudy[] = [
           "The problems above were enough to start the revamp. But some of the best ideas were not in the problem statement at all.",
           "Bulk reply was one of them. We got there by watching how people really used the inbox: they were dealing with a lot of reviews by hand.",
           "Two sources shaped this. In our PM's conversations with customers, we learned that people kept their own sheet of review responses, or wrote their replies somewhere else, possibly in an AI that knew their business. None of that happened inside SocialPilot.",
-          "PostHog only records the product, so it showed us the other half: people coming into the inbox, pasting a reply, and being done.",
-          "Put together, the thinking was happening outside the product. The inbox was only where a finished reply landed.",
+          "The thinking was happening outside the product. The inbox was only where a finished reply landed.",
         ],
         groups: [
           {

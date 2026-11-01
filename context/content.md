@@ -62,3 +62,5 @@ Design principles, key decisions (needs the new design), What's next (goals only
 
 ## About-paragraph ending
 "...quietly clear for the people who rely on them every day." (changed from "the teams who run social every day").
+
+Update (2026-11-01): Jatin removed the PostHog sentence from the "What we noticed" copy on the page. The PostHog finding (people pasting a reply and being done) is still true and recorded above, but is not on the page; do not re-add unless he asks. The closing line there now reads "The thinking was happening outside the product. The inbox was only where a finished reply landed."
