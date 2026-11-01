@@ -28,7 +28,7 @@ export default function Home() {
               always feel: a reviews inbox that never makes you hunt, a report
               that answers the question before you ask it, an AI feature that
               earns trust in its first minute. My work is making those moments
-              quietly clear for the teams who run social every day.
+              quietly clear for the people who rely on them every day.
             </p>
           </Reveal>
         </section>
