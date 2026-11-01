@@ -55,10 +55,8 @@ export default function Home() {
                 <p>{renderBold(p.description)}</p>
 
                 <a href={href} className="case-card" aria-label={`${p.title} case study`}>
-                  <div className="zoom">
-                    <div className="screen screen-a" />
-                    <div className="screen screen-b" />
-                  </div>
+                  {/* Empty until real screens arrive: they go inside .zoom so the hover zoom keeps working */}
+                  <div className="zoom" />
                   <span className="soon">Screens coming soon</span>
                 </a>
 

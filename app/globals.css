@@ -244,12 +244,6 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; }
   transition: transform 0.9s var(--ease);
 }
 .case-card:hover .zoom, .case-card:focus-visible .zoom { transform: scale(1.06); }
-.screen {
-  width: 20%; aspect-ratio: 9 / 18; border-radius: 26px;
-  background: var(--bg); border: 1px solid var(--border);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
-}
-.screen-b { margin-top: 8%; }
 .soon { position: absolute; bottom: 16px; left: 0; right: 0; text-align: center; font-size: 0.8125rem; color: var(--text-2); }
 
 .project-cta { display: flex; justify-content: center; margin-top: 32px; }
@@ -310,7 +304,6 @@ blockquote { max-width: 760px; margin: 0 auto; font-size: clamp(1.75rem, 4vw, 3r
 
 @media (max-width: 767px) {
   .case-card { aspect-ratio: 4 / 3; border-radius: 20px; }
-  .screen { width: 30%; border-radius: 20px; }
   .work-heading { gap: 0.4em 0.25em; margin-bottom: 56px; }
 }
 
