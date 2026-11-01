@@ -1,12 +1,25 @@
-// A mark is drawn over a crop; all values are page pixels of the legacy inbox as seen in a 1512 x 771 window.
-export type Mark = { x: number; y: number; w: number; h: number; label?: string; dashed?: boolean };
+// A callout points from a dot on the screenshot to a short note beside it.
+// ax, ay: where the dot sits; cy: the height of the note (defaults to ay). All values are page pixels of the legacy inbox
+// as seen in a 1512 x 771 window. g nudges the bend of the line (in % of the figure width) so lines do not cross.
+export type Callout = { title: string; text: string; ax: number; ay: number; cy?: number; g?: number };
 
-// A pre-cropped screenshot (captured at 2x) of the page region x, y, w, h, plus outlines drawn on it.
-export type Crop = { src: string; alt: string; x: number; y: number; w: number; h: number; marks: Mark[] };
+// A pre-cropped screenshot (captured at 2x) of the page region x, y, w, h, with callouts.
+// img: width of the screenshot in % of the figure (default 64). side: where the notes go (default "right").
+export type Figure = {
+  src: string;
+  alt: string;
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+  img?: number;
+  side?: "left" | "right";
+  callouts: Callout[];
+};
 
 export type ProblemGroup = {
   title: string;
-  items: { title: string; text: string; crop: Crop }[];
+  figures: Figure[];
 };
 
 export type CaseSection = {
@@ -65,51 +78,54 @@ export const caseStudies: CaseStudy[] = [
         groups: [
           {
             title: "Nothing built for scale",
-            items: [
+            figures: [
               {
-                title: "No way to handle reviews in bulk",
-                text: "There is no way to select several reviews and act on them together. For the cafe owner, a day of mixed reviews means opening every card and replying one by one.",
-                crop: { src: "/case/reviews-inbox/p1-bulk.png", alt: "The toolbar above the review list, with no way to select reviews", x: 600, y: 100, w: 890, h: 260, marks: [{ x: 975, y: 112, w: 512, h: 40, dashed: true, label: "No way to select reviews" }] },
-              },
-              {
-                title: "Nothing is prioritised",
-                text: "A review that does not recommend looks just like one that does. Nothing tells the owner which review needs attention first.",
-                crop: { src: "/case/reviews-inbox/p2-priority.png", alt: "Two review cards with the same weight whether they recommend or not", x: 800, y: 246, w: 690, h: 430, marks: [{ x: 1345, y: 258, w: 132, h: 32 }, { x: 1382, y: 621, w: 95, h: 32 }] },
+                src: "/case/reviews-inbox/f1-triage.png",
+                alt: "The top of the legacy inbox: toolbar, stat tiles and the first review",
+                x: 363, y: 100, w: 1127, h: 500,
+                callouts: [
+                  { title: "No bulk actions", text: "Reviews are handled one at a time.", ax: 1150, ay: 132 },
+                  { title: "Stats that do nothing", text: "The tiles don't filter the list.", ax: 1300, ay: 200, cy: 250, g: 2 },
+                  { title: "No priority", text: "A bad review looks like a good one.", ax: 1480, ay: 274, cy: 400 },
+                ],
               },
             ],
           },
           {
             title: "Space and status",
-            items: [
+            figures: [
               {
-                title: "The reply field is always open",
-                text: "Every card carries an open reply box, even when the review already has a reply. It adds height to every review and pushes the next one off the screen.",
-                crop: { src: "/case/reviews-inbox/p3-reply-open.png", alt: "A review card with an empty reply box open under the review", x: 363, y: 300, w: 1127, h: 290, marks: [{ x: 379, y: 391, w: 1093, h: 102 }] },
-              },
-              {
-                title: "No way to see if a review was replied to",
-                text: "Once the field is closed, nothing on the card says whether the review has been replied to.",
-                crop: { src: "/case/reviews-inbox/p4-replied-status.png", alt: "The top of a review card with no replied status", x: 363, y: 246, w: 1127, h: 140, marks: [{ x: 640, y: 256, w: 660, h: 40, dashed: true, label: "No replied status" }] },
+                src: "/case/reviews-inbox/f2-card.png",
+                alt: "A legacy review card with the reply box open",
+                x: 363, y: 246, w: 887, h: 434,
+                callouts: [
+                  { title: "Nothing says replied", text: "Close the field, and no sign remains.", ax: 1000, ay: 300 },
+                  { title: "No template nudge", text: "Nothing offers to save a reply.", ax: 700, ay: 411 },
+                  { title: "Always open", text: "Even when a reply already exists.", ax: 1100, ay: 440, cy: 525, g: 2 },
+                  { title: "Icons, no labels", text: "AI and templates get the least weight.", ax: 563, ay: 466, cy: 650, g: 0.5 },
+                ],
               },
             ],
           },
           {
             title: "Slow, hidden tools",
-            items: [
+            figures: [
               {
-                title: "Filtering is hard",
-                text: "Users have struggled to filter out replied reviews. The filter is a small two-pane popup with 39 tags in a short scroll box, and the numbers at the top do not filter anything.",
-                crop: { src: "/case/reviews-inbox/p5-filter.png", alt: "The filter popup, with Reply Status as the fifth item in a side list", x: 560, y: 100, w: 560, h: 460, marks: [{ x: 567, y: 340, w: 143, h: 32 }] },
+                src: "/case/reviews-inbox/f3-filter.png",
+                alt: "The legacy filter popup",
+                x: 560, y: 100, w: 560, h: 460, img: 50, side: "left",
+                callouts: [
+                  { title: "39 tags, one tiny list", text: "The longest list gets the smallest box.", ax: 572, ay: 230 },
+                  { title: "Replied is buried", text: "Reply Status is fifth in a side list.", ax: 580, ay: 356 },
+                ],
               },
               {
-                title: "Reply options are buried",
-                text: "Templates and AI are bare icons with the lowest weight in the composer. After generating a reply, Regenerate, Shorten, Expand, Fix Grammar and Change Tone all sit behind a single icon.",
-                crop: { src: "/case/reviews-inbox/p6-ai-menu.png", alt: "The AI options menu that opens from a single icon in the reply box", x: 363, y: 390, w: 560, h: 330, marks: [{ x: 545, y: 450, w: 36, h: 36 }, { x: 543, y: 487, w: 158, h: 220 }] },
-              },
-              {
-                title: "No nudge to save a template",
-                text: "Paste a reply written elsewhere and nothing suggests saving it as a template, so good replies get written once and lost.",
-                crop: { src: "/case/reviews-inbox/p7-template.png", alt: "The reply box, with nothing offering to save a reply as a template", x: 363, y: 380, w: 1127, h: 130, marks: [{ x: 379, y: 391, w: 1093, h: 102, dashed: true, label: "Nothing offers to save a template" }] },
+                src: "/case/reviews-inbox/f4-ai-menu.png",
+                alt: "The AI options menu in the legacy reply box",
+                x: 363, y: 390, w: 560, h: 330, img: 50,
+                callouts: [
+                  { title: "One icon hides every AI tool", text: "Regenerate, shorten, expand, grammar, tone.", ax: 695, ay: 499 },
+                ],
               },
             ],
           },

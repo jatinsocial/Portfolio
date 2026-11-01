@@ -4,28 +4,58 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Nav from "@/components/Nav";
 import Reveal from "@/components/Reveal";
-import { caseStudies, getCaseStudy, type Crop } from "@/lib/case-studies";
+import type { CSSProperties } from "react";
+import { caseStudies, getCaseStudy, type Figure } from "@/lib/case-studies";
 
-// Shows one region of a screenshot with outlines drawn on it (all positions come from the source pixels).
-function CropView({ c }: { c: Crop }) {
-  const pct = (v: number, of: number) => `${(v / of) * 100}%`;
+// A screenshot with dots on it, joined by thin lines to short notes beside it.
+// Every position is a % of the figure, worked out here from page pixels so the markup can stay plain CSS.
+function Annotated({ f }: { f: Figure }) {
+  const img = f.img ?? 68;
+  const side = f.side ?? "right";
+  const imgL = side === "right" ? 0 : 100 - img;
+  const edge = side === "right" ? img + 6 : imgL - 6;
+  const px = (v: number) => imgL + img * ((v - f.x) / f.w);
+  const py = (v: number) => (100 * (v - f.y)) / f.h;
+  const aspect = f.w / (img / 100) / f.h;
+
   return (
-    <div className="crop" role="img" aria-label={c.alt} style={{ aspectRatio: `${c.w} / ${c.h}` }}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img className="crop-img" src={c.src} alt="" />
-      {c.marks.map((m, i) => (
-        <span
-          key={i}
-          className={`mark${m.dashed ? " dashed" : ""}`}
-          style={{
-            left: pct(m.x - c.x, c.w),
-            top: pct(m.y - c.y, c.h),
-            width: pct(m.w, c.w),
-            height: pct(m.h, c.h),
-          }}
+    <div
+      className="anno"
+      data-side={side}
+      style={{ "--img": `${img}%`, "--imgL": `${imgL}%`, "--ar": aspect } as CSSProperties}
+    >
+      <div className="anno-shot" style={{ aspectRatio: `${f.w} / ${f.h}` }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={f.src} alt={f.alt} />
+      </div>
+
+      <svg className="anno-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden>
+        {f.callouts.map((c) => {
+          const g = c.g ?? 0;
+          const gx = side === "right" ? img + 2 + g : imgL - 2 - g;
+          return (
+            <path
+              key={c.title}
+              d={`M${px(c.ax)} ${py(c.ay)} H${gx} V${py(c.cy ?? c.ay)} H${edge}`}
+              vectorEffect="non-scaling-stroke"
+            />
+          );
+        })}
+      </svg>
+
+      {f.callouts.map((c) => (
+        <span key={c.title} className="anno-dot" style={{ left: `${px(c.ax)}%`, top: `${py(c.ay)}%` }} aria-hidden />
+      ))}
+
+      {f.callouts.map((c) => (
+        <div
+          key={c.title}
+          className="callout"
+          style={{ "--cy": `${py(c.cy ?? c.ay)}%`, "--edge": `${edge}%` } as CSSProperties}
         >
-          {m.label && <em>{m.label}</em>}
-        </span>
+          <h4>{c.title}</h4>
+          <p>{c.text}</p>
+        </div>
       ))}
     </div>
   );
@@ -84,17 +114,9 @@ export default async function CaseStudyPage({
               {s.groups?.map((g) => (
                 <div key={g.title} className="problem-group">
                   <h3>{g.title}</h3>
-                  <ul>
-                    {g.items.map((it) => (
-                      <li key={it.title}>
-                        <div className="problem-text">
-                          <h4>{it.title}</h4>
-                          <p>{it.text}</p>
-                        </div>
-                        <CropView c={it.crop} />
-                      </li>
-                    ))}
-                  </ul>
+                  {g.figures.map((f) => (
+                    <Annotated key={f.src} f={f} />
+                  ))}
                 </div>
               ))}
             </section>

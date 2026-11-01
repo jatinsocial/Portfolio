@@ -341,21 +341,34 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .case-shot { border-radius: 20px; overflow: hidden; border: 1px solid var(--border); }
 .case-shot img { display: block; width: 100%; height: auto; }
 .case-figure figcaption { margin-top: 12px; font-size: 0.8125rem; color: var(--text-2); }
-.problem-group { margin-top: 56px; }
-.problem-group h3 { font-size: 1.0625rem; font-weight: 600; letter-spacing: -0.01em; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
-.problem-group ul { list-style: none; }
-.problem-group li { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 40px; align-items: center; padding: 32px 0; border-bottom: 1px solid var(--border); }
-.problem-group li:last-child { border-bottom: 0; }
-.problem-group h4 { font-size: 1.125rem; font-weight: 600; letter-spacing: -0.015em; line-height: 1.3; }
-.problem-group li p { margin-top: 8px; font-size: 1rem; line-height: 1.65; color: var(--text-2); max-width: none; }
-.crop { position: relative; width: 100%; border-radius: 16px; overflow: hidden; border: 1px solid var(--border); background: var(--bg-2); }
-.crop-img { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
-.mark { position: absolute; border: 2px solid #6938ef; border-radius: 8px; box-shadow: 0 0 0 3px rgba(105, 56, 239, 0.14); }
-.mark.dashed { border-style: dashed; background: rgba(105, 56, 239, 0.06); }
-.mark { display: flex; align-items: center; justify-content: center; }
-.mark em {
-  padding: 4px 10px; border-radius: 6px; background: rgba(255, 255, 255, 0.92); color: #6938ef;
-  font-style: normal; font-size: 0.75rem; font-weight: 600; line-height: 1.2; white-space: nowrap;
+.problem-group { margin-top: 64px; }
+.problem-group h3 { font-size: 1.0625rem; font-weight: 600; letter-spacing: -0.01em; padding-bottom: 12px; border-bottom: 1px solid var(--border); margin-bottom: 8px; }
+
+/* Annotated screenshot: dots on the screen, thin lines out to short notes (desktop). Stacks on small screens. */
+.anno { position: relative; margin-top: 40px; }
+.anno-shot { border-radius: 16px; overflow: hidden; border: 1px solid var(--border); background: var(--bg-2); box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06); }
+.anno-shot img { display: block; width: 100%; height: 100%; }
+.anno-lines, .anno-dot { display: none; }
+.callout { margin-top: 20px; }
+.callout h4 { font-size: 1.125rem; font-weight: 600; letter-spacing: -0.015em; line-height: 1.3; }
+.callout p { margin-top: 4px; font-size: 0.9375rem; line-height: 1.5; color: var(--text-2); max-width: none; }
+
+@media (min-width: 860px) {
+  .anno { aspect-ratio: var(--ar); }
+  .anno-shot { position: absolute; top: 0; left: var(--imgL); width: var(--img); }
+  .anno-lines { display: block; position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+  .anno-lines path { fill: none; stroke: #6938ef; stroke-width: 1.5px; stroke-linejoin: round; }
+  .anno-dot {
+    display: block; position: absolute; width: 11px; height: 11px; margin: -5.5px 0 0 -5.5px; border-radius: 50%;
+    background: var(--bg); border: 2px solid #6938ef; box-sizing: border-box;
+  }
+  .callout { position: absolute; top: var(--cy); margin: 0; transform: translateY(-0.72rem); }
+  .anno[data-side="right"] .callout { left: var(--edge); right: 0; padding-left: 20px; }
+  .anno[data-side="left"] .callout { left: 0; width: var(--edge); padding-right: 20px; text-align: right; }
+  .callout::before {
+    content: ""; position: absolute; top: calc(0.72rem - 4.5px); width: 9px; height: 9px;
+    border-top: 1.5px solid #6938ef; border-right: 1.5px solid #6938ef;
+  }
+  .anno[data-side="right"] .callout::before { left: 3px; transform: rotate(45deg); }
+  .anno[data-side="left"] .callout::before { right: 3px; transform: rotate(-135deg); }
 }
-@media (prefers-color-scheme: dark) { .mark em { background: rgba(20, 20, 24, 0.92); color: #b9a6ff; } }
-@media (max-width: 859px) { .problem-group li { grid-template-columns: 1fr; gap: 20px; } }

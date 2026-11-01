@@ -22,3 +22,6 @@ Newest at the bottom. Format: date, decision, why. Record reversals too.
 
 ## 2026-11-01 — Case study problems: crops, not numbered pins
 Chose one zoomed crop per problem with an outline over seven numbered pins on one screenshot. Pins were small, far from their text and hard to match; crops put each problem next to its evidence. Rejected: pins, and labels floating around one big screenshot.
+
+## 2026-11-01 — Problem annotations: leader-line callouts
+Jatin shared a reference where short notes sit beside the screenshot and connect to it with thin lines, so the text can stay short. Adopted that pattern (our own styling) with four figures instead of seven crops. Rejected earlier: numbered pins, and one outlined crop per problem.
