@@ -106,7 +106,7 @@ export const caseStudies: CaseStudy[] = [
                 alt: "The legacy filter popup",
                 x: 560, y: 100, w: 560, h: 460, img: 50, side: "left",
                 callouts: [
-                  { title: "Replied is buried", text: "Reply Status is fifth in a side list.", ax: 580, ay: 356 },
+                  { title: "Too many clicks to find replied", text: "Filter, Reply Status, option, Apply.", ax: 580, ay: 356 },
                 ],
               },
               {

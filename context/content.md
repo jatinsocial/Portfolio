@@ -46,3 +46,5 @@ Update: on the page, the "no nudge to save a pasted reply as a template" problem
 Update: "Stats that do nothing" (non-filtering stat tiles) and "No priority" were removed from the legacy section by Jatin (2026-11-01). Legacy list now: no bulk actions; nothing says replied; always open; easy-to-miss reply tools; 39 tags in one tiny list; replied filter buried; AI tools behind one icon.
 
 Update: "39 tags, one tiny list" removed from the legacy section (2026-11-01). Legacy list now: no bulk actions; nothing says replied; always open; easy-to-miss reply tools; replied filter buried; AI tools behind one icon.
+
+Update: filter note is now "Too many clicks to find replied" (steps: Filter, Reply Status, option, Apply). Do not state a click number unless verified in the product.
