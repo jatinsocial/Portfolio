@@ -97,9 +97,6 @@ export default function Home() {
                   </g>
                   <rect x="25" y="26" width="8.5" height="5" rx="2.5" transform="rotate(40 29 28.5)" fill="#f5a623" stroke="#1d1d1f" strokeWidth="1.5" />
                 </svg>
-                <svg className="sel-arrow" width="30" height="30" viewBox="0 0 24 24" aria-hidden>
-                  <path d="M3 2l17 8-7.5 2.2L9.8 20z" fill="#111" stroke="#fff" strokeWidth="1.2" strokeLinejoin="round" />
-                </svg>
               </span>
             </h2>
           </Reveal>

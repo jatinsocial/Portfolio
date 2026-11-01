@@ -57,7 +57,7 @@ Full specs: [`context/components.md`](context/components.md). Summary:
 | Reveal | `components/Reveal.tsx` | Fade and lift into view once, via IntersectionObserver. |
 | Work heading | in `app/page.tsx` | "Work that I'm extremely proud of": "Work" in a bordered box, "extremely" in a purple chip with a "❖ Main component" tag, "proud of" in orange. |
 | Project block | in `app/page.tsx` | Title, description (`**bold**` markers), flat 2:1 screens card that zooms to 1.06 on hover, centered "View case study →" pill, thin divider. |
-| Journey heading | in `app/page.tsx` | "How it all **started**": "started" in purple inside a selection frame with corner crosses, a pen cursor and a floating arrow cursor. |
+| Journey heading | in `app/page.tsx` | "How it all **started**": "started" in purple inside a selection frame with corner crosses, and a pen-tool nib on its bottom-right corner (no decorative arrow cursor; it looked like a second cursor and was removed). |
 | Journey timeline | in `app/page.tsx` | Vertical line with dots, stage label, title, text, optional item cards. Last stage has a filled purple dot. |
 
 ## 6. Content rules
