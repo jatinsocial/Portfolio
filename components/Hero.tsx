@@ -28,12 +28,12 @@ export default function Hero() {
 
           <p className="hero-role hero-in" style={{ animationDelay: "100ms" }}>
             Product Designer at{" "}
-            <span className="chip"><i className="chip-ico">S</i>SocialPilot</span>
+            <span className="chip">SocialPilot</span>
           </p>
           <p className="hero-sub hero-in" style={{ animationDelay: "180ms" }}>
             Based in India, designing thoughtful analytics and AI experiences.
             Right now I&apos;m shaping{" "}
-            <span className="chip"><i className="chip-ico chip-ai">AI</i>AI Lab</span>
+            <span className="chip">AI Lab</span>
             , an agentic layer for the SocialPilot product suite.
           </p>
 

@@ -12,7 +12,6 @@ Last updated: 2026-11-01. Move items between sections as status changes; never d
 - [ ] Origin story and a hobby or two, to finish the personal "About" copy.
 - [ ] How to word the SocialPilot acquisition (acquirer name) and whether to show it.
 - [ ] Journey: dates per stage, and a role title for the Reviews stage (currently "SocialPilot's second product").
-- [ ] Real SocialPilot and AI Lab logos for the hero chips (currently "S" and "AI" squares).
 - [ ] His own wording for project descriptions, hero paragraph, journey notes and the philosophy quote.
 - [ ] Confirm the email address is OK to show publicly.
 
@@ -37,6 +36,8 @@ Last updated: 2026-11-01. Move items between sections as status changes; never d
 - Photography section.
 - Tabs on project cards ("Complete report", "Before & after", etc.). Replaced by a simple hover zoom.
 - Gradients on project visuals and anywhere in the project section.
+- Logo icons ("S", "AI") next to SocialPilot and AI Lab in the hero text; removed on request.
+- The decorative drifting arrow cursor under the Journey title (looked like a second cursor).
 - Strictly Apple-minimal direction and the strictly reference-led direction (Jatin chose hybrid).
 - The first-version card grid for Work (replaced by full-width project blocks).
 - A "Phil's-ophy" style quote copied from the reference (replaced by an original placeholder).

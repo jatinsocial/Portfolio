@@ -12,9 +12,9 @@ Last updated: 2026-11-01. Each entry: what it is, behavior, where the code is, s
 
 ## Hero — `components/Hero.tsx`
 - Two-column grid (stacks below 860px, polaroid first, text centered).
-- Left: serif-italic greeting cycling Hello, Namaste, Bonjour, Hola (2.6s); "I am Jatin Solanki" + waving 👋; "Product Designer at [S] SocialPilot" chip; paragraph with an "AI Lab" chip; buttons "Say hi 👋" (soft gray, links `#contact`) and "Resume 📄" (dark, link is `#` placeholder). Buttons 228x56px.
+- Left: serif-italic greeting cycling Hello, Namaste, Bonjour, Hola (2.6s); "I am Jatin Solanki" + waving 👋; "Product Designer at **SocialPilot**" and a paragraph with **AI Lab**, both as bold text with no logo icons (the "S" and "AI" icon squares were removed on request); buttons "Say hi 👋" (soft gray, links `#contact`) and "Resume 📄" (dark, link is `#` placeholder). Buttons 228x56px.
 - Right: white polaroid (340px, rotate 6deg) with a gray placeholder "JS" photo and handwritten caption `me_01.jpeg`; floating sky-blue arrow cursor with a "Jatin Solanki" tag overlapping the photo's left edge.
-- Placeholders: portrait (swap `.polaroid-photo` for an `<img>`, black and white suits it), company chip icons ("S", "AI"), Resume link.
+- Placeholders: portrait (swap `.polaroid-photo` for an `<img>`, black and white suits it), Resume link. No company logo icons: do not add them back unless Jatin asks.
 
 ## Reveal — `components/Reveal.tsx`
 Wraps content; adds `.in` once when 15% visible. Optional `delay` (ms).

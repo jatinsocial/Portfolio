@@ -45,4 +45,4 @@ portfolio/
 ## Known limits
 - Local git repo on `main` with one commit; remote `origin` points to `https://github.com/jatinsocial/Portfolio.git` but **nothing has been pushed** (Jatin declined for now). No deployment configured (Vercel is the likely target).
 - Case study pages do not exist; "View case study" links are in-page anchors.
-- Images and logos are placeholders (polaroid portrait, company chips, project screens).
+- Images and logos are placeholders (polaroid portrait, project screens).
