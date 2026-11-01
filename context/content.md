@@ -48,3 +48,5 @@ Update: "Stats that do nothing" (non-filtering stat tiles) and "No priority" wer
 Update: "39 tags, one tiny list" removed from the legacy section (2026-11-01). Legacy list now: no bulk actions; nothing says replied; always open; easy-to-miss reply tools; replied filter buried; AI tools behind one icon.
 
 Update: filter note is now "Too many clicks to find replied" (steps: Filter, Reply Status, option, Apply). Do not state a click number unless verified in the product.
+
+Update (2026-11-01): legacy notes are now: No bulk actions; Always open; Two reviews fill the screen; No replied status (header never says replied or pending; in this demo account every review has a reply, so a collapsed card still shows the reply block below, only the header has no status); Too many clicks to find replied (Filter, Reply Status, option, Apply); Easy-to-miss reply tools; One icon hides every AI tool.

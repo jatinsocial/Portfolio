@@ -87,13 +87,20 @@ export const caseStudies: CaseStudy[] = [
             title: "Space and status",
             figures: [
               {
-                src: "/case/reviews-inbox/f2-card.png",
-                alt: "A legacy review card with the reply box open",
-                x: 363, y: 246, w: 887, h: 434,
+                src: "/case/reviews-inbox/f2a-open.png",
+                alt: "Two legacy reviews on one screen, the first with its reply box open",
+                x: 363, y: 246, w: 1109, h: 525,
                 callouts: [
-                  { title: "Nothing says replied", text: "Close the field, and no sign remains.", ax: 1000, ay: 300 },
-                  { title: "Always open", text: "Even when a reply already exists.", ax: 1100, ay: 440, cy: 525, g: 2 },
-                  { title: "Easy-to-miss reply tools", text: "Templates and AI are just icons.", ax: 563, ay: 466, cy: 650, g: 0.5 },
+                  { title: "Always open", text: "Even when a reply already exists.", ax: 1000, ay: 440 },
+                  { title: "Two reviews fill the screen", text: "The third is out of sight.", ax: 1000, ay: 740 },
+                ],
+              },
+              {
+                src: "/case/reviews-inbox/f2b-collapsed.png",
+                alt: "A legacy review with its reply box closed",
+                x: 363, y: 246, w: 1109, h: 380,
+                callouts: [
+                  { title: "No replied status", text: "The header never says replied or pending.", ax: 900, ay: 282 },
                 ],
               },
             ],
@@ -104,9 +111,9 @@ export const caseStudies: CaseStudy[] = [
               {
                 src: "/case/reviews-inbox/f3-filter.png",
                 alt: "The legacy filter popup",
-                x: 560, y: 100, w: 560, h: 460, img: 50, side: "left",
+                x: 560, y: 100, w: 560, h: 460, img: 50,
                 callouts: [
-                  { title: "Too many clicks to find replied", text: "Filter, Reply Status, option, Apply.", ax: 580, ay: 356 },
+                  { title: "Too many clicks to find replied", text: "Filter, Reply Status, option, Apply.", ax: 705, ay: 356 },
                 ],
               },
               {
@@ -114,7 +121,8 @@ export const caseStudies: CaseStudy[] = [
                 alt: "The AI options menu in the legacy reply box",
                 x: 363, y: 390, w: 560, h: 330, img: 50,
                 callouts: [
-                  { title: "One icon hides every AI tool", text: "Regenerate, shorten, expand, grammar, tone.", ax: 695, ay: 499 },
+                  { title: "Easy-to-miss reply tools", text: "Templates and AI are just icons.", ax: 563, ay: 468, cy: 430 },
+                  { title: "One icon hides every AI tool", text: "Regenerate, shorten, expand, grammar, tone.", ax: 695, ay: 499, cy: 560 },
                 ],
               },
             ],

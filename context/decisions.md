@@ -25,3 +25,6 @@ Chose one zoomed crop per problem with an outline over seven numbered pins on on
 
 ## 2026-11-01 — Problem annotations: leader-line callouts
 Jatin shared a reference where short notes sit beside the screenshot and connect to it with thin lines, so the text can stay short. Adopted that pattern (our own styling) with four figures instead of seven crops. Rejected earlier: numbered pins, and one outlined crop per problem.
+
+## 2026-11-01 — Annotated figures: screenshot left, notes right
+All figures keep the screenshot on the left and notes on the right (Jatin's call). The `side: "left"` option in `Figure` exists but should not be used.
