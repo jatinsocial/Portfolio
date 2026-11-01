@@ -109,6 +109,12 @@ export default async function CaseStudyPage({
               {s.groups?.map((g) => (
                 <div key={g.title} className="problem-group">
                   <h3>{g.title}</h3>
+                  {g.notes?.map((n) => (
+                    <div key={n.title} className="idea">
+                      <h4>{n.title}</h4>
+                      <p>{n.text}</p>
+                    </div>
+                  ))}
                   {g.figures.map((f) => (
                     <Annotated key={f.src} f={f} />
                   ))}

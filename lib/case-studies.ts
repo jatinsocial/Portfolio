@@ -20,6 +20,8 @@ export type Figure = {
 export type ProblemGroup = {
   title: string;
   figures: Figure[];
+  // Plain notes under the group title, for ideas that have no screenshot yet.
+  notes?: { title: string; text: string }[];
 };
 
 export type CaseSection = {
@@ -135,6 +137,32 @@ export const caseStudies: CaseStudy[] = [
                   { title: "Easy-to-miss reply tools", text: "Templates and AI are just icons.", ax: 563, ay: 468, cy: 430 },
                   { title: "One icon hides every AI tool", text: "Regenerate, shorten, expand, grammar, tone.", ax: 695, ay: 499, cy: 560 },
                 ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: "noticed",
+        title: "What we noticed",
+        heading: { lead: "What we", word: "noticed" },
+        paragraphs: [
+          "The problems above were enough to start the revamp. But some of the best ideas were not in the problem statement at all.",
+          "Bulk reply was one of them. We got there by watching how people really used the inbox: they were dealing with a lot of reviews by hand.",
+          "In PostHog sessions, people kept their own sheet of review responses, or went somewhere else to write their replies, maybe an AI that knew their business. All of that sat outside SocialPilot. What we did see was how it ended: they came, pasted a reply, and were done.",
+        ],
+        groups: [
+          {
+            title: "Two ideas that came out of it",
+            figures: [],
+            notes: [
+              {
+                title: "Save a pasted reply as a template",
+                text: "If people paste replies from elsewhere, we can offer to save them as templates. The reviewer's name becomes a custom field that is replaced with the real name on every review.",
+              },
+              {
+                title: "Bulk reply with the same options as a single reply",
+                text: "Use AI, use a template, or write a custom reply by hand, because why not. Bulk reply should not take any of those away.",
               },
             ],
           },

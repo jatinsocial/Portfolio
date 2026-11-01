@@ -47,10 +47,18 @@ Title block: "What the legacy inbox gets [wrong]". Notes are a bold 2-4 word tit
 - The claim that users struggle to filter replied reviews is Jatin's; its source (tickets, calls) is not recorded.
 
 ### Removed on Jatin's request (do not bring back unless he asks)
-Breadcrumb/location switcher, tagging modal, thin source/customer detail, reply `...` menu, "no nudge to save a pasted reply as a template", "Stats that do nothing", "No priority" (nothing prioritised), "39 tags, one tiny list".
+Breadcrumb/location switcher, tagging modal, thin source/customer detail, reply `...` menu, "Stats that do nothing", "No priority" (nothing prioritised), "39 tags, one tiny list".
+
+### What we noticed (section 4, drafted 2026-11-01 from Jatin's account)
+The seven problems above were enough to start the revamp; the best ideas were not in the original problem statement. Facts Jatin gave:
+- Bulk reply was NOT in the problem statement. It came from observing that people dealt with a lot of reviews by hand. It was one of the hardest things to pull off, and Jatin has not seen competitors do it yet (say it as his observation, never as a claim about the market).
+- The template idea (previously on the legacy list as "no nudge to save a pasted reply as a template", removed because it was never a problem statement) came from PostHog sessions: people kept their own sheet of review responses or wrote replies elsewhere (maybe an AI that knows their business, outside SocialPilot); they came, pasted a reply and were done.
+- Idea 1: offer to save a pasted reply as a template; the reviewer name is a custom field replaced with the actual name for each review.
+- Idea 2: bulk reply offers the same options as a single reply: AI, templates, or a custom reply written by hand.
+On the page this is the "What we noticed" section (two idea notes, no screenshots yet). Not yet on the page: the hardest-to-pull-off and competitor remarks (keep for key decisions).
 
 ### Still to write
-What I learned (real research only), design principles, key decisions (needs the new design), What's next (goals only).
+Design principles, key decisions (needs the new design), What's next (goals only).
 
 ## About-paragraph ending
 "...quietly clear for the people who rely on them every day." (changed from "the teams who run social every day").
