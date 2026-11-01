@@ -85,10 +85,17 @@ export default function Home() {
                 <i className="cr tr" aria-hidden />
                 <i className="cr bl" aria-hidden />
                 <i className="cr br" aria-hidden />
-                <svg className="pen" width="30" height="30" viewBox="0 0 30 30" aria-hidden>
-                  <path d="M4 4l7.5 2.5 8 8-5 5-8-8z" fill="#f5a623" stroke="#1d1d1f" strokeWidth="1.6" strokeLinejoin="round" />
-                  <circle cx="9.5" cy="9.5" r="1.7" fill="#fff" stroke="#1d1d1f" strokeWidth="1.2" />
-                  <rect x="18" y="19" width="8" height="5" rx="2.5" transform="rotate(40 22 21.5)" fill="#f5a623" stroke="#1d1d1f" strokeWidth="1.4" />
+                <svg className="pen" viewBox="0 0 36 36" aria-hidden>
+                  {/* Pen-tool nib: drawn pointing up, rotated so the tip points up-left */}
+                  <g transform="translate(16 16) rotate(-45)">
+                    <path
+                      d="M0 -13 C3.5 -7 8.5 -3 8.5 3 L8.5 7 Q8.5 10.5 5 10.5 L-5 10.5 Q-8.5 10.5 -8.5 7 L-8.5 3 C-8.5 -3 -3.5 -7 0 -13 Z"
+                      fill="#f5a623" stroke="#1d1d1f" strokeWidth="1.8" strokeLinejoin="round"
+                    />
+                    <path d="M0 -10 L0 -1.6" stroke="#1d1d1f" strokeWidth="1.5" strokeLinecap="round" />
+                    <circle cx="0" cy="1.4" r="2.4" fill="#fff" stroke="#1d1d1f" strokeWidth="1.5" />
+                  </g>
+                  <rect x="25" y="26" width="8.5" height="5" rx="2.5" transform="rotate(40 29 28.5)" fill="#f5a623" stroke="#1d1d1f" strokeWidth="1.5" />
                 </svg>
                 <svg className="sel-arrow" width="30" height="30" viewBox="0 0 24 24" aria-hidden>
                   <path d="M3 2l17 8-7.5 2.2L9.8 20z" fill="#111" stroke="#fff" strokeWidth="1.2" strokeLinejoin="round" />

@@ -216,8 +216,9 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; }
 .cr.tr { top: -7px; right: -7px; }
 .cr.bl { bottom: -7px; left: -7px; }
 .cr.br { bottom: -7px; right: -7px; }
-.pen { position: absolute; right: -0.35em; bottom: -0.3em; }
-.sel-arrow { position: absolute; right: -1.1em; bottom: -1.5em; animation: drift 5s ease-in-out infinite; }
+/* Pen nib sits inside the frame, over the end of the word; arrow floats below it */
+.pen { position: absolute; right: 0.04em; bottom: -0.1em; width: 0.8em; height: 0.8em; }
+.sel-arrow { position: absolute; top: calc(100% + 0.45em); right: 0.85em; animation: drift 5s ease-in-out infinite; }
 .wh-box {
   padding: 0.04em 0.28em; border-radius: 0.22em; background: var(--bg); border: 1px solid var(--border);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);

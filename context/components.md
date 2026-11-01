@@ -31,7 +31,7 @@ Centered paragraph, large secondary-color text (1.25-1.75rem). Current copy came
 Label "Philosophy" and a serif-italic placeholder line: "Make it obvious first. Then make it delightful." Placeholder written by the agent; awaiting Jatin's own line.
 
 ## Journey — `#journey`
-- **Heading**: "How it all" + "started" inside a purple selection frame (2px border, four `+` corner marks), a pen-nib cursor at the word's end and a drifting black arrow cursor below it. Both cursors are hand-drawn SVGs.
+- **Heading**: "How it all" + "started" inside a purple selection frame (2px border, four `+` corner marks), a pen-tool nib inside the frame's bottom-right corner over the end of the word (orange nib pointing up-left with hole and slit, plus a separate small oval, dark outline, as in the reference) and a drifting black arrow cursor below it. Both are hand-drawn SVGs; the nib's size is `0.8em`, so it scales with the title.
 - **Timeline** (`lib/journey.ts`): vertical 1px line, dot per stage, label, title, text, optional item cards (`--bg-2`, 16px radius). The last stage has a filled purple dot with a soft ring.
 - Stages: UI/UX Intern; Associate (Competitor Reports, Bulk Edit); SocialPilot's second product / Reviews (Reviews Inbox, AI Reports, AI Onboarding); SocialPilot AI Lab (label "Now").
 
