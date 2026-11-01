@@ -335,3 +335,22 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .case-section { margin-top: 72px; }
 .case-section h2 { font-size: clamp(1.4rem, 2.4vw, 1.75rem); font-weight: 600; letter-spacing: -0.02em; line-height: 1.25; }
 .case-section p { max-width: 760px; margin-top: 16px; font-size: 1.0625rem; line-height: 1.7; color: var(--text-2); }
+
+/* Annotated screenshot and problem groups */
+.case-figure { margin-top: 40px; }
+.case-shot { position: relative; border-radius: 20px; overflow: hidden; border: 1px solid var(--border); }
+.case-shot img { display: block; width: 100%; height: auto; }
+.case-figure figcaption { margin-top: 12px; font-size: 0.8125rem; color: var(--text-2); }
+.pin {
+  display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%;
+  background: #6938ef; color: #fff; font-size: 0.8rem; font-weight: 600; line-height: 1;
+}
+.case-shot .pin { position: absolute; transform: translate(-50%, -50%); box-shadow: 0 0 0 5px rgba(105, 56, 239, 0.25); }
+.problem-group { margin-top: 48px; }
+.problem-group h3 { font-size: 1.0625rem; font-weight: 600; letter-spacing: -0.01em; padding-bottom: 12px; border-bottom: 1px solid var(--border); }
+.problem-group ol { list-style: none; }
+.problem-group li { display: flex; gap: 16px; padding: 20px 0; border-bottom: 1px solid var(--border); }
+.problem-group li:last-child { border-bottom: 0; }
+.pin-static { flex: none; margin-top: 2px; }
+.problem-group h4 { font-size: 1.0625rem; font-weight: 600; letter-spacing: -0.01em; }
+.problem-group li p { margin-top: 6px; font-size: 1rem; line-height: 1.65; color: var(--text-2); max-width: 680px; }

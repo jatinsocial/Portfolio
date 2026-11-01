@@ -37,3 +37,6 @@ Polaroid portrait, Resume link, LinkedIn link, project screens, project descript
 
 ## Reviews Inbox case study (from Jatin's brief)
 Product: SocialPilot Reviews is a review and online reputation management platform for local businesses and multi-location brands (collect, manage, market reviews at scale, e.g. Google Business Profile). Problem framing: a coffee-shop owner at SBR, Ahmedabad drowning in scattered reviews; the legacy inbox is a bottleneck; the redesign turns a passive, cluttered feed into a high-velocity operational workspace ("chaos to resolution"). Copy is Jatin's, only typos fixed. No metrics given.
+
+### Legacy problems (validated with Jatin)
+Bulk handling is the primary problem (a missing capability). Others: no prioritisation; reply field always open; no replied/pending state once closed; filtering (users have struggled to filter out replied reviews, per Jatin; source not yet given); reply options (AI/templates) are icon-only and generated options sit behind a dropdown; no nudge to save a pasted reply as a template. Dropped on Jatin's request: breadcrumb/location switcher, tagging modal, thin source/customer detail, reply `...` menu. The case study has no outcomes: the new inbox is not in development yet, so the closing section must use goals, not results.

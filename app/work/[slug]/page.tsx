@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Nav from "@/components/Nav";
@@ -44,6 +45,37 @@ export default async function CaseStudyPage({
               <h2>{s.title}</h2>
               {s.paragraphs.map((p, i) => (
                 <p key={i}>{p}</p>
+              ))}
+
+              {s.figure && (
+                <figure className="case-figure">
+                  <div className="case-shot">
+                    <Image src={s.figure.src} alt={s.figure.alt} width={s.figure.width} height={s.figure.height} />
+                    {s.figure.pins.map((pin) => (
+                      <span key={pin.n} className="pin" style={{ left: `${pin.x}%`, top: `${pin.y}%` }}>
+                        {pin.n}
+                      </span>
+                    ))}
+                  </div>
+                  <figcaption>{s.figure.caption}</figcaption>
+                </figure>
+              )}
+
+              {s.groups?.map((g) => (
+                <div key={g.title} className="problem-group">
+                  <h3>{g.title}</h3>
+                  <ol>
+                    {g.items.map((it) => (
+                      <li key={it.n}>
+                        <span className="pin pin-static">{it.n}</span>
+                        <div>
+                          <h4>{it.title}</h4>
+                          <p>{it.text}</p>
+                        </div>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
               ))}
             </section>
           </Reveal>
