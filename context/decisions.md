@@ -30,4 +30,4 @@ Jatin shared a reference where short notes sit beside the screenshot and connect
 All figures keep the screenshot on the left and notes on the right (Jatin's call). The `side: "left"` option in `Figure` exists but should not be used.
 
 ## 2026-11-01 — Template nudge is an opportunity, not a legacy problem
-Jatin removed "no nudge to save a template" from the legacy problems because it was never in the problem statement; it came from PostHog sessions. It now lives in "What we noticed" as an idea, and will return in key decisions. Same for bulk reply: not in the original problem statement, found by observing people handle many reviews by hand.
+Jatin removed "no nudge to save a template" from the legacy problems because it was never in the problem statement; it came from the PM's customer conversations (sheets and outside AI) plus PostHog sessions (people pasting a reply and being done). It now lives in "What we noticed" as an idea, and will return in key decisions. Same for bulk reply: not in the original problem statement, found by observing people handle many reviews by hand.
