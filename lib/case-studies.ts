@@ -28,6 +28,8 @@ export type CaseSection = {
   paragraphs: string[];
   // Shows the title as a large heading with one word in a selection frame (lead + word).
   heading?: { lead: string; word: string };
+  // Annotated figures shown before the groups.
+  figures?: Figure[];
   groups?: ProblemGroup[];
 };
 
@@ -69,6 +71,16 @@ export const caseStudies: CaseStudy[] = [
           "I used the legacy inbox the way an owner would, and the problems fall into three groups.",
         ],
         heading: { lead: "What the legacy inbox gets", word: "wrong" },
+        figures: [
+          {
+            src: "/case/reviews-inbox/f0-inbox.png",
+            alt: "The legacy Reviews Inbox as one screen shows it",
+            x: 0, y: 0, w: 1512, h: 771,
+            callouts: [
+              { title: "Two reviews fill the screen", text: "The third is out of sight.", ax: 1100, ay: 690 },
+            ],
+          },
+        ],
         groups: [
           {
             title: "Nothing built for scale",
@@ -92,7 +104,6 @@ export const caseStudies: CaseStudy[] = [
                 x: 363, y: 246, w: 1109, h: 525,
                 callouts: [
                   { title: "Always open", text: "Even when a reply already exists.", ax: 1000, ay: 440 },
-                  { title: "Two reviews fill the screen", text: "The third is out of sight.", ax: 1000, ay: 740 },
                 ],
               },
               {
