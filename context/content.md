@@ -74,4 +74,4 @@ Screens shared: five (Third Wave Coffee / TWC Jaipur demo data). Layout: left fi
 - **Replied reviews** view: cards show the review (truncated, Read more) with the reply inline under a reply arrow; the right panel shows only rating and summary.
 - Hover on a card: the card icons (tag, open, copy, share, reply) and inline **Generate Reply** and **Template** actions appear. Icons are visible only on hover.
 - Clicking reply **expands the card as an overlay on top of the next review** (the list does not move). Once you type or generate a reply, **all reply options appear upfront**: Templates, Rewrite, Shorten, Expand, Grammar, Tone, plus send.
-Not yet explained: bulk selection per card, the save-as-template flow and reviewer-name custom field, how Send Drafts and the confirmation rule are configured.
+Not yet explained: bulk selection per card, the save-as-template flow and reviewer-name custom field. How the confirmation rule is set up is out of scope for the case study (Jatin, 2026-11-02): do not ask about it or write it up.
