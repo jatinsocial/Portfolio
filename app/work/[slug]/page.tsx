@@ -204,8 +204,9 @@ export default async function CaseStudyPage({
           </nav>
         </header>
 
-        {c.parts.map((p) => (
+        {c.parts.map((p, i) => (
           <div key={p.id} id={p.id} className={`part part-${p.id}`}>
+            {i > 0 && <hr className="part-divider" />}
             {p.sections.map((id) => {
               const s = byId.get(id);
               return s ? <SectionView key={id} s={s} /> : null;
