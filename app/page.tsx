@@ -54,10 +54,15 @@ export default function Home() {
                 <h3>{p.title}</h3>
                 <p>{renderBold(p.description)}</p>
 
-                <a href={href} className="case-card" aria-label={`${p.title} case study`}>
-                  {/* Empty until real screens arrive: they go inside .zoom so the hover zoom keeps working */}
-                  <div className="zoom" />
-                  <span className="soon">Screens coming soon</span>
+                <a href={href} className={`case-card${p.cover ? " has-cover" : ""}`} aria-label={`${p.title} case study`}>
+                  {/* Screens go inside .zoom so the hover zoom keeps working */}
+                  <div className="zoom">
+                    {p.cover && (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img className="cover-full" src={p.cover.src} alt={p.cover.alt} />
+                    )}
+                  </div>
+                  {!p.cover && <span className="soon">Screens coming soon</span>}
                 </a>
 
                 <div className="project-cta">

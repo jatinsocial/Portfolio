@@ -24,7 +24,7 @@ Centered paragraph, large secondary-color text (1.25-1.75rem). Current copy came
 
 ## Work — `#work`
 - **Heading**: "Work" (bordered box) "that I'm" "extremely" (purple chip, `❖ Main component` tag above) "proud of" (orange). Same size as the Journey title.
-- **Project block** (one per entry in `lib/projects.ts`): title, description (`**bold**` markers become `<strong>`), a `.case-card` link (2:1, flat `--bg-2` surface, no placeholder frames, just a "Screens coming soon" caption, same look as the case study cover) whose empty `.zoom` layer scales to 1.06 on hover, then a centered "View case study →" pill. 1px divider between blocks.
+- **Project block** (one per entry in `lib/projects.ts`): title, description (`**bold**` markers become `<strong>`), a `.case-card` link (2:1 gray placeholder with a "Screens coming soon" caption; a project with `cover` in `lib/projects.ts` instead shows just that screenshot edge to edge at its own ratio, class `has-cover`) whose empty `.zoom` layer scales to 1.06 on hover, then a centered "View case study →" pill. 1px divider between blocks.
 - No category labels, badges, tabs or gradients.
 
 ## Philosophy quote — `.quote`

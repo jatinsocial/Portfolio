@@ -3,7 +3,11 @@ export type Project = {
   title: string;
   // Wrap words in **double asterisks** to render them bold.
   description: string;
+  // The screen shown on the home page card (just the screen, no container).
+  cover?: Shot;
 };
+
+export type Shot = { src: string; alt: string };
 
 // Descriptions are placeholder copy, to be replaced with Jatin's own words.
 export const projects: Project[] = [
@@ -12,6 +16,7 @@ export const projects: Project[] = [
     title: "Reviews Inbox Revamp",
     description:
       "A calmer way for teams to **read, triage and reply** to every review from every location, in one place.",
+    cover: { src: "/case/reviews-inbox/cover.png", alt: "The redesigned Reviews Inbox" },
   },
   {
     slug: "competitor-reports",
