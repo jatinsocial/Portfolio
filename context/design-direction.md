@@ -63,3 +63,6 @@ Problems are shown on real screenshots of the legacy product: screenshot on the 
 
 ## Case study type hierarchy (2026-11-02)
 Section title (selection-frame heading, 56px max) > subsection title (`.problem-group h3`, 22-28px semibold) > idea or callout title (about 17-18px semibold) > body (16px). A subsection title must never be smaller than the titles under it.
+
+## Shadow (2026-11-02)
+Screenshots and cover cards use `--shadow-soft` (`0 1px 2px rgba(0,0,0,.03), 0 12px 40px rgba(0,0,0,.05)`). Keep it that soft; do not use heavier shadows on screenshots.
