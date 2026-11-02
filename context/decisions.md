@@ -34,3 +34,6 @@ Jatin removed "no nudge to save a template" from the legacy problems because it 
 
 ## 2026-11-01 — AI Lab moves to the end of Work
 Order is now Reviews Inbox, Competitor Reports, AI in Location Reports, AI Onboarding, SocialPilot AI Lab. Jatin's reason: the AI Lab product is unfinished. The Journey still ends on AI Lab ("Now"), which is separate from the Work order.
+
+## 2026-11-02 — Case study as a before/after story
+Jatin: the case study needed storytelling and a layout like the Unacademy polls case study (two parts, Before and After). Adopted: glance row, numbered Before/After parts, How might we, before/after screenshot pairs, the café owner as the narrative thread. Ignored from that reference: iterations, memes, emoji headings.

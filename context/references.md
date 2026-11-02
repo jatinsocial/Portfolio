@@ -25,3 +25,6 @@ Inspiration only. Take structure and interaction; never copy copy, photos, illus
 
 ## Annotated "old design" screenshots (2026-11-01)
 Jatin shared a Medium/UX Planet case study (Unacademy polls) where a large screenshot sits beside short notes joined by thin leader lines. Take: the layout and the idea of very few words per problem. Do not take: its copy, imagery or its green styling; ours is purple with our own copy and screenshots.
+
+## Case study structure: UX Planet, "Enhancing Polls Experience in Live Classes at Unacademy" (2026-11-02)
+Jatin asked us to follow its shape: an At a Glance block, context, then the work split into Before (old flow, problem, How might we) and After (new designs section by section, results, conclusion), with a storytelling voice (an analogy to set the scene, "imagine you are..."). Take: the two-part before/after structure, the glance block, HMW questions, a narrative thread. Ignore: iterations, memes, emoji headings, GIFs, its copy and images. Ours threads the café owner through the story.

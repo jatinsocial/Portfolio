@@ -5,7 +5,7 @@ import Nav from "@/components/Nav";
 import Reveal from "@/components/Reveal";
 import SelHeading from "@/components/SelHeading";
 import type { CSSProperties } from "react";
-import { caseStudies, getCaseStudy, type Figure } from "@/lib/case-studies";
+import { caseStudies, getCaseStudy, type CaseSection, type Compare, type Figure } from "@/lib/case-studies";
 
 // A screenshot with dots on it, joined by thin lines to short notes beside it.
 // Every position is a % of the figure, worked out here from page pixels so the markup can stay plain CSS.
@@ -61,6 +61,93 @@ function Annotated({ f }: { f: Figure }) {
   );
 }
 
+// Before and after, side by side: two framed screenshots with a label each.
+function CompareView({ c }: { c: Compare }) {
+  return (
+    <div className="compare">
+      {(c.title || c.text) && (
+        <div className="compare-head">
+          {c.title && <h3>{c.title}</h3>}
+          {c.text && <p>{c.text}</p>}
+        </div>
+      )}
+      <div className="compare-grid">
+        {([["Before", c.before], ["After", c.after]] as const).map(([label, shot]) => (
+          <figure key={label} className={`shot shot-${label.toLowerCase()}`}>
+            <span className="shot-label">{label}</span>
+            <div className="shot-frame">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={shot.src} alt={shot.alt} />
+            </div>
+            <figcaption>{shot.caption}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function SectionView({ s }: { s: CaseSection }) {
+  return (
+    <Reveal>
+      <section id={s.id} className="case-section">
+        {s.eyebrow && <p className="eyebrow">{s.eyebrow}</p>}
+        {s.heading ? <SelHeading lead={s.heading.lead} word={s.heading.word} /> : <h2>{s.title}</h2>}
+        {s.paragraphs.map((p, i) => (
+          <p key={i}>{p}</p>
+        ))}
+
+        {s.quote && <blockquote className="pull">{s.quote}</blockquote>}
+
+        {s.hmw && (
+          <ol className="hmw">
+            {s.hmw.map((q, i) => (
+              <li key={q}>
+                <span>{String(i + 1).padStart(2, "0")}</span>
+                {q}
+              </li>
+            ))}
+          </ol>
+        )}
+
+        {s.compare?.map((c) => (
+          <CompareView key={c.before.src} c={c} />
+        ))}
+
+        {s.legend && (
+          <div className="legend">
+            {s.legend.map((l) => (
+              <div key={l.title}>
+                <h4>{l.title}</h4>
+                <p>{l.text}</p>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {s.figures?.map((f) => (
+          <Annotated key={f.src} f={f} />
+        ))}
+
+        {s.groups?.map((g) => (
+          <div key={g.title + g.figures.length + (g.figures[0]?.src ?? "")} className="problem-group">
+            {g.title && <h3>{g.title}</h3>}
+            {g.notes?.map((n) => (
+              <div key={n.title} className="idea">
+                <h4>{n.title}</h4>
+                <p>{n.text}</p>
+              </div>
+            ))}
+            {g.figures.map((f) => (
+              <Annotated key={f.src} f={f} />
+            ))}
+          </div>
+        ))}
+      </section>
+    </Reveal>
+  );
+}
+
 export function generateStaticParams() {
   return caseStudies.map((c) => ({ slug: c.slug }));
 }
@@ -82,46 +169,56 @@ export default async function CaseStudyPage({
   const c = getCaseStudy((await params).slug);
   if (!c) notFound();
 
+  const byId = new Map(c.sections.map((x) => [x.id, x]));
+
   return (
     <>
       <Nav />
       <main className="case">
-        <Link href="/#work" className="case-back">← Back to work</Link>
-        <h1 className="case-title">{c.title}</h1>
-        <p className="case-intro">{c.intro}</p>
+        <header className="case-hero">
+          <Link href="/#work" className="case-back">← Back to work</Link>
+          <p className="eyebrow">Case study</p>
+          <h1 className="case-title">{c.title}</h1>
+          <p className="case-intro">{c.intro}</p>
 
-        <div className="case-visual">
-          <span className="soon">Cover screens coming soon</span>
-        </div>
+          <dl className="glance">
+            {c.glance.map((g) => (
+              <div key={g.label}>
+                <dt>{g.label}</dt>
+                <dd>{g.value}</dd>
+              </div>
+            ))}
+          </dl>
 
-        {c.sections.map((s) => (
-          <Reveal key={s.id}>
-            <section id={s.id} className="case-section">
-              {s.heading ? <SelHeading lead={s.heading.lead} word={s.heading.word} /> : <h2>{s.title}</h2>}
-              {s.paragraphs.map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
+          <div className="case-cover">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={c.cover.src} alt={c.cover.alt} />
+          </div>
 
-              {s.figures?.map((f) => (
-                <Annotated key={f.src} f={f} />
-              ))}
+          <nav className="case-nav" aria-label="Case study parts">
+            {c.parts.map((p) => (
+              <a key={p.id} href={`#${p.id}`}>{p.title}</a>
+            ))}
+          </nav>
+        </header>
 
-              {s.groups?.map((g) => (
-                <div key={g.title} className="problem-group">
-                  <h3>{g.title}</h3>
-                  {g.notes?.map((n) => (
-                    <div key={n.title} className="idea">
-                      <h4>{n.title}</h4>
-                      <p>{n.text}</p>
-                    </div>
-                  ))}
-                  {g.figures.map((f) => (
-                    <Annotated key={f.src} f={f} />
-                  ))}
-                </div>
-              ))}
-            </section>
-          </Reveal>
+        {c.parts.map((p, i) => (
+          <div key={p.id} id={p.id} className={`part part-${p.id}`}>
+            <Reveal>
+              <div className="part-head">
+                <p className="eyebrow">{p.eyebrow}</p>
+                <h2 className="part-title">
+                  <span className="part-num">{String(i + 1).padStart(2, "0")}</span>
+                  {p.title}
+                </h2>
+                {p.lead && <p className="part-lead">{p.lead}</p>}
+              </div>
+            </Reveal>
+            {p.sections.map((id) => {
+              const s = byId.get(id);
+              return s ? <SectionView key={id} s={s} /> : null;
+            })}
+          </div>
         ))}
       </main>
     </>

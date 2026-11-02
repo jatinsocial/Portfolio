@@ -82,3 +82,10 @@ Not yet explained: bulk selection per card, the save-as-template flow and review
 - Bulk reply, **without selection** (Jatin, 2026-11-02, from a hover screen): hovering a reply option in the right panel (Generate Reply, Use Templates, Custom Reply) shows a chip such as "30 Unreplied" and by default targets the unreplied reviews. The 30 matches the "No Reply Drafted" count in the Status filter. What happens after the click (drafts created, then Send Drafts?) is not yet confirmed.
 - Bulk reply, **with selection**: not yet explained.
 - **Bulk reply, now on the page** (2026-11-02, from six screens): *Without selection*: hover a reply option, it shows "30 Unreplied" and targets all unreplied reviews by default; click and the panel shows "Working on it"; then a "30 Drafts created" toast, each review shows a Draft row, counts update (Drafts 50, No Reply Drafted 0), and the panel offers Rewrite / Write New, Shorten, Expand, Grammar, Tone. *With selection*: hover a review to reveal its checkbox; the header shows "1 Review Selected" with "Select All 100 Reviews" and tag, share, export icons; hovering Generate Reply shows "20 Selected" and it targets the selection; the panel then shows the same refine tools for the selection. Selection checkboxes are hover-only.
+
+### Case study storytelling drafts (2026-11-02, agent-written, Jatin to confirm)
+- At a glance: Product SocialPilot Reviews; My role Product Designer; Scope end-to-end redesign of the Reviews Inbox; Platform Web; Status designed, awaiting development. (No timeline or team given, so none shown.)
+- How might we (drafted from the validated problems): clear a pile of reviews without opening each; show what is replied at a glance; fit more reviews without hiding the reply tools.
+- Part leads and section intros are written from the owner's point of view (the café owner from Jatin's brief); they are framing, not new facts.
+- Caption "Before: four clicks to find replied" is verified in the legacy product (Filter, Reply Status, an option, Apply).
+- Pull quote "From chaos to resolution." comes from Jatin's brief.

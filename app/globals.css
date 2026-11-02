@@ -370,3 +370,58 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .idea:last-of-type { border-bottom: 0; }
 .idea h4 { font-size: 1.125rem; font-weight: 600; letter-spacing: -0.015em; line-height: 1.3; }
 .idea p { margin-top: 6px; font-size: 1rem; line-height: 1.65; color: var(--text-2); max-width: 680px; }
+
+/* Case study: hero, parts, story blocks */
+.case-hero { padding-bottom: 24px; }
+.eyebrow { font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #6938ef; margin-bottom: 12px; }
+.case-hero .eyebrow { margin-top: 32px; }
+.case-title { margin-top: 0; }
+.case-intro { max-width: 760px; }
+.glance { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; margin-top: 40px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.glance div { padding: 18px 20px 18px 0; }
+.glance div + div { padding-left: 20px; border-left: 1px solid var(--border); }
+.glance dt { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-2); }
+.glance dd { margin-top: 6px; font-size: 0.9375rem; font-weight: 500; line-height: 1.4; color: var(--text); }
+.case-cover { margin-top: 40px; border-radius: 24px; overflow: hidden; border: 1px solid var(--border); background: var(--bg-2); box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08); }
+.case-cover img { display: block; width: 100%; height: auto; }
+.case-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px; }
+.case-nav a { padding: 8px 16px; border-radius: 999px; background: var(--bg-2); font-size: 0.875rem; font-weight: 500; transition: background 0.3s var(--ease); }
+.case-nav a:hover { background: var(--border); }
+
+.part { margin-top: 96px; }
+.part-head { padding-top: 40px; border-top: 2px solid var(--text); }
+.part-title { font-size: clamp(2.5rem, 7vw, 5rem); font-weight: 600; letter-spacing: -0.04em; line-height: 1; display: flex; align-items: baseline; gap: 0.25em; }
+.part-num { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 0.45em; color: #6938ef; letter-spacing: 0; }
+.part-lead { margin-top: 20px; max-width: 640px; font-size: clamp(1.15rem, 2vw, 1.4rem); line-height: 1.45; color: var(--text-2); }
+.part-after .part-title { color: #6938ef; }
+.case-section .eyebrow { margin-bottom: 10px; }
+
+.pull { margin: 40px 0 8px; font-family: var(--serif); font-style: italic; font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.1; letter-spacing: -0.01em; color: var(--text); }
+.hmw { list-style: none; margin-top: 28px; }
+.hmw li { display: flex; gap: 20px; align-items: baseline; padding: 20px 0; border-top: 1px solid var(--border); font-size: clamp(1.15rem, 2vw, 1.4rem); font-weight: 500; letter-spacing: -0.015em; line-height: 1.35; }
+.hmw li:last-child { border-bottom: 1px solid var(--border); }
+.hmw li span { flex: none; font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 1rem; color: #6938ef; letter-spacing: 0; }
+
+.compare { margin-top: 40px; }
+.compare-head h3 { font-size: 1.125rem; font-weight: 600; letter-spacing: -0.015em; }
+.compare-head p { margin-top: 4px !important; font-size: 1rem !important; }
+.compare-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-top: 16px; align-items: start; }
+.shot { position: relative; }
+.shot-label { display: inline-block; padding: 5px 12px; border-radius: 999px; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; background: var(--bg-2); color: var(--text-2); margin-bottom: 10px; }
+.shot-after .shot-label { background: #6938ef; color: #fff; }
+.shot-frame { border-radius: 16px; overflow: hidden; border: 1px solid var(--border); background: var(--bg-2); }
+.shot-after .shot-frame { border-color: #6938ef; box-shadow: 0 0 0 3px rgba(105, 56, 239, 0.12); }
+.shot-frame img { display: block; width: 100%; height: auto; }
+.shot figcaption { margin-top: 10px; font-size: 0.875rem; line-height: 1.4; color: var(--text-2); }
+.legend { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 28px; }
+.legend h4 { font-size: 1.0625rem; font-weight: 600; letter-spacing: -0.01em; }
+.legend p { margin-top: 6px !important; font-size: 0.9375rem !important; line-height: 1.5 !important; }
+
+@media (max-width: 859px) {
+  .glance { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .glance div, .glance div + div { padding: 14px 12px 14px 0; border-left: 0; }
+  .compare-grid, .legend { grid-template-columns: 1fr; }
+  .part { margin-top: 72px; }
+}
+
+.part { scroll-margin-top: 90px; }

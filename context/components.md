@@ -48,3 +48,6 @@ Case study sections may include `heading` (`{ lead, word }`, renders the selecti
 
 ## SelHeading — `components/SelHeading.tsx`
 Shared title block: lead text plus one word in a purple selection frame with corner crosses and a pen-tool nib. Used by the Journey title and the case study's legacy section. Props: `lead`, `word`, optional `as`.
+
+## Case study page structure (2026-11-02)
+Hero (back link, eyebrow, title, intro, At a glance row, cover screenshot, part pills) then `parts` in order. Each part has a large divider (eyebrow, numbered title, lead) and its sections. Section building blocks in `lib/case-studies.ts`: `eyebrow`, `heading` (selection-frame title), `paragraphs`, `quote` (serif pull quote), `hmw` (numbered How might we list), `compare` (Before/After framed screenshot pair, After outlined in purple), `legend` (short labelled columns), `figures`/`groups` (annotated screenshots). Parts: Before (product, problem, legacy, hmw, noticed), After (after-overview, after-status, after-reply, templates, bulk), What's next. Add a section to `sections` and list its id in a part or it will not render.

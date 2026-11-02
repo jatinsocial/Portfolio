@@ -17,6 +17,11 @@ export type Figure = {
   callouts: Callout[];
 };
 
+export type Shot = { src: string; alt: string; caption: string };
+
+// Before and after, side by side.
+export type Compare = { title?: string; text?: string; before: Shot; after: Shot };
+
 export type ProblemGroup = {
   title: string;
   figures: Figure[];
@@ -27,7 +32,17 @@ export type ProblemGroup = {
 export type CaseSection = {
   id: string;
   title: string;
+  // Small label above the title, e.g. "Context".
+  eyebrow?: string;
   paragraphs: string[];
+  // A large pull quote shown after the paragraphs.
+  quote?: string;
+  // "How might we" questions.
+  hmw?: string[];
+  // Before and after pairs.
+  compare?: Compare[];
+  // Short labelled columns under a figure or compare (for example the three panes of the inbox).
+  legend?: { title: string; text: string }[];
   // Shows the title as a large heading with one word in a selection frame (lead + word).
   heading?: { lead: string; word: string };
   // Annotated figures shown before the groups.
@@ -35,10 +50,17 @@ export type CaseSection = {
   groups?: ProblemGroup[];
 };
 
+// One chapter of the story. `sections` are ids from the study's sections.
+export type Part = { id: string; eyebrow: string; title: string; lead?: string; sections: string[] };
+
 export type CaseStudy = {
   slug: string; // matches a slug in lib/projects.ts
   title: string;
   intro: string;
+  // "At a glance" facts (only facts Jatin has given).
+  glance: { label: string; value: string }[];
+  cover: { src: string; alt: string };
+  parts: Part[];
   sections: CaseSection[];
 };
 
@@ -49,10 +71,41 @@ export const caseStudies: CaseStudy[] = [
     title: "Reviews Inbox Revamp",
     intro:
       "Redesigning the SocialPilot Reviews Inbox, from a passive, cluttered review feed into a high-velocity operational workspace.",
+    glance: [
+      { label: "Product", value: "SocialPilot Reviews" },
+      { label: "My role", value: "Product Designer" },
+      { label: "Scope", value: "End-to-end redesign of the Reviews Inbox" },
+      { label: "Platform", value: "Web" },
+      { label: "Status", value: "Designed, awaiting development" },
+    ],
+    cover: { src: "/case/reviews-inbox/cover.png", alt: "The redesigned Reviews Inbox" },
+    parts: [
+      {
+        id: "before",
+        eyebrow: "Part one",
+        title: "Before",
+        lead: "Start with the owner's day: hundreds of customers, mixed reviews piling up, and an inbox that treats every one the same.",
+        sections: ["product", "problem", "legacy", "hmw", "noticed"],
+      },
+      {
+        id: "after",
+        eyebrow: "Part two",
+        title: "After",
+        lead: "Same owner, same pile of reviews. Here is what changed.",
+        sections: ["after-overview", "after-status", "after-reply", "templates", "bulk"],
+      },
+      {
+        id: "next-part",
+        eyebrow: "Finally",
+        title: "What's next",
+        sections: ["next"],
+      },
+    ],
     sections: [
       {
         id: "product",
         title: "About the product",
+        eyebrow: "Context",
         paragraphs: [
           "SocialPilot Reviews is a comprehensive review and online reputation management platform designed to help local businesses and multi-location brands build loyalty, retain customers, and grow. The platform enables operators to collect, manage, and market reviews at scale across channels like Google Business Profile.",
         ],
@@ -60,6 +113,8 @@ export const caseStudies: CaseStudy[] = [
       {
         id: "problem",
         title: "Defining the problem",
+        eyebrow: "The problem",
+        quote: "From chaos to resolution.",
         paragraphs: [
           "Imagine you're a business owner overseeing a bustling coffee shop at a prime location like SBR in Ahmedabad, confronted daily by an overwhelming backlog of hundreds of customers and the scattered reviews they leave on your business profile, containing mixed feedback.",
           "In this chaotic reality, the legacy reviews inbox acts as an everyday bottleneck. Instead of acting as an intelligent product that handles tedious tasks easily, it traps users in a cycle of administrative friction.",
@@ -69,6 +124,7 @@ export const caseStudies: CaseStudy[] = [
       {
         id: "legacy",
         title: "What the legacy inbox gets wrong",
+        eyebrow: "What was wrong",
         paragraphs: [
           "I used the legacy inbox the way an owner would, and the problems fall into three groups.",
         ],
@@ -145,11 +201,12 @@ export const caseStudies: CaseStudy[] = [
       {
         id: "noticed",
         title: "What we noticed",
+        eyebrow: "Beyond the brief",
         heading: { lead: "What we", word: "noticed" },
         paragraphs: [
           "The problems above were enough to start the revamp. But some of the best ideas were not in the problem statement at all.",
           "Bulk reply was one of them. We got there by watching how people really used the inbox: they were dealing with a lot of reviews by hand.",
-          "Two sources shaped this. In our PM's conversations with customers, we learned that people kept their own sheet of review responses, or wrote their replies somewhere else, possibly in an AI that knew their business. None of that happened inside SocialPilot.",
+          "In our PM's conversations with customers, we learned that people kept their own sheet of review responses, or wrote their replies somewhere else, possibly in an AI that knew their business. None of that happened inside SocialPilot.",
           "The thinking was happening outside the product. The inbox was only where a finished reply landed.",
         ],
         groups: [
@@ -170,13 +227,107 @@ export const caseStudies: CaseStudy[] = [
         ],
       },
       {
-        id: "decisions",
-        title: "Key decisions",
-        heading: { lead: "Key", word: "decisions" },
-        paragraphs: [],
+        id: "hmw",
+        title: "How might we",
+        eyebrow: "The questions",
+        paragraphs: ["Three questions came out of that, and they shaped everything that follows."],
+        hmw: [
+          "How might we let an owner get through a pile of reviews without opening each one?",
+          "How might we show what has been replied to, at a glance?",
+          "How might we fit more reviews on a screen without hiding the reply tools?",
+        ],
+      },
+      {
+        id: "after-overview",
+        title: "The new inbox, at a glance",
+        eyebrow: "The new inbox",
+        paragraphs: [
+          "The owner opens the new inbox and sees three columns, each with one job. On the left, filters. In the middle, the reviews. On the right, what they can do to many reviews at once, plus the rating and an AI summary.",
+        ],
+        compare: [
+          {
+            title: "Same screen, side by side",
+            text: "The old inbox fit two reviews. The new one fits four, with filters and bulk reply always in view.",
+            before: { src: "/case/reviews-inbox/f0-inbox.png", alt: "The legacy inbox with two reviews on screen", caption: "Before: two reviews on a screen." },
+            after: { src: "/case/reviews-inbox/cover.png", alt: "The new inbox with four reviews on screen", caption: "After: four reviews on a screen." },
+          },
+        ],
+        legend: [
+          { title: "Filters", text: "Status first, with counts. Ratings, tags and more below." },
+          { title: "The work", text: "Compact cards. Hover to select, open to reply." },
+          { title: "Reply and understand", text: "Generate, template or custom reply, then rating, sentiment and an AI summary." },
+        ],
+      },
+      {
+        id: "after-status",
+        title: "Know what's replied, fast",
+        eyebrow: "Status",
+        paragraphs: [
+          "The first question is always the same: what is still waiting? Status is now the first filter, with counts, and replied reviews show their reply right on the card.",
+        ],
+        compare: [
+          {
+            before: { src: "/case/reviews-inbox/f3-filter.png", alt: "The legacy filter with Reply Status in a side list", caption: "Before: four clicks to find replied." },
+            after: { src: "/case/reviews-inbox/a4-status.png", alt: "The new status filter with counts", caption: "After: status first, with counts." },
+          },
+        ],
         groups: [
           {
-            title: "Save a pasted reply as a template",
+            title: "",
+            figures: [
+              {
+                src: "/case/reviews-inbox/a3-replied.png",
+                alt: "The new inbox showing replied reviews with the reply on each card",
+                x: 350, y: 100, w: 810, h: 300,
+                callouts: [
+                  { title: "The reply, on the card", text: "No more guessing what was answered.", ax: 1112, ay: 265 },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: "after-reply",
+        title: "Reply where you read",
+        eyebrow: "Replying",
+        paragraphs: [
+          "To answer a single review, the owner just starts. A review stays one line until it is needed. Open it and it floats over the next one, so the list never jumps. Once a reply is written or generated, every option is there.",
+        ],
+        groups: [
+          {
+            title: "",
+            figures: [
+              {
+                src: "/case/reviews-inbox/a1-hover.png",
+                alt: "Hovering a review in the new inbox reveals its tools",
+                x: 350, y: 150, w: 810, h: 170,
+                callouts: [
+                  { title: "Tools on hover", text: "Quiet until you reach for them.", ax: 1105, ay: 194 },
+                  { title: "Start right there", text: "Generate Reply or Template, inline.", ax: 1105, ay: 282 },
+                ],
+              },
+            ],
+          },
+        ],
+        compare: [
+          {
+            before: { src: "/case/reviews-inbox/f4-ai-menu.png", alt: "The legacy reply box with every AI tool behind one icon", caption: "Before: every AI tool behind one icon." },
+            after: { src: "/case/reviews-inbox/a2-options.png", alt: "The new reply box with all options shown", caption: "After: every option, upfront." },
+          },
+        ],
+      },
+      {
+        id: "templates",
+        title: "Write once, reuse",
+        eyebrow: "Templates",
+        heading: { lead: "Write once,", word: "reuse" },
+        paragraphs: [
+          "The idea that grew out of those sheets: if someone pastes a reply they like, offer to keep it for next time.",
+        ],
+        groups: [
+          {
+            title: "",
             figures: [
               {
                 src: "/case/reviews-inbox/n1-nudge.png",
@@ -198,6 +349,23 @@ export const caseStudies: CaseStudy[] = [
               },
             ],
           },
+        ],
+      },
+      {
+        id: "bulk",
+        title: "Reply to many at once",
+        eyebrow: "Bulk reply",
+        heading: { lead: "Reply to many", word: "at once" },
+        paragraphs: [
+          "Bulk reply works two ways, and keeps the same options as a single reply: use AI, use a template, or write a reply yourself.",
+        ],
+        compare: [
+          {
+            before: { src: "/case/reviews-inbox/f1-triage.png", alt: "The legacy inbox toolbar with no way to select reviews", caption: "Before: reviews are handled one at a time." },
+            after: { src: "/case/reviews-inbox/c3-target.png", alt: "The reply panel showing it will act on 20 selected reviews", caption: "After: reply to many from the panel." },
+          },
+        ],
+        groups: [
           {
             title: "Bulk reply, without selecting",
             figures: [
@@ -265,6 +433,14 @@ export const caseStudies: CaseStudy[] = [
               },
             ],
           },
+        ],
+      },
+      {
+        id: "next",
+        title: "What's next",
+        eyebrow: "What's next",
+        paragraphs: [
+          "The new inbox is designed and waiting for development, so there are no results to share yet.",
         ],
       },
     ],
