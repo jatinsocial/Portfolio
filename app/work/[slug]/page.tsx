@@ -200,17 +200,8 @@ export default async function CaseStudyPage({
           </nav>
         </header>
 
-        {c.parts.map((p, i) => (
+        {c.parts.map((p) => (
           <div key={p.id} id={p.id} className={`part part-${p.id}`}>
-            <Reveal>
-              <div className="part-head">
-                <h2 className="part-title">
-                  <span className="part-num">{String(i + 1).padStart(2, "0")}</span>
-                  {p.title}
-                </h2>
-                {p.lead && <p className="part-lead">{p.lead}</p>}
-              </div>
-            </Reveal>
             {p.sections.map((id) => {
               const s = byId.get(id);
               return s ? <SectionView key={id} s={s} /> : null;

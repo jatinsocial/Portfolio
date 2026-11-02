@@ -42,3 +42,4 @@ One line per session, newest at the bottom. Add yours before finishing.
 - 2026-11-02 — Removed the "From chaos to resolution." pull quote from the problem section at Jatin's request. The `quote` building block stays available but unused.
 - 2026-11-02 — Removed the "What was wrong" eyebrow label above the legacy section title (the title itself stays).
 - 2026-11-02 — Removed all small all-caps eyebrow labels from the case study (section labels, "Case study", "Part one/two") at Jatin's request, in the data, the page and the styles. Remaining small caps are the At a glance labels and the Before/After chips on screenshots.
+- 2026-11-02 — Removed the big part header blocks (rule, numbered "Before"/"After"/"What's next" titles and lead lines) from the case study at Jatin's request. Parts still exist in the data and as the pill links under the cover; their `lead` text is no longer shown.

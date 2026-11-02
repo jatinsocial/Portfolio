@@ -388,12 +388,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .case-nav a:hover { background: var(--border); }
 
 .part { margin-top: 96px; }
-.part-head { padding-top: 40px; border-top: 2px solid var(--text); }
-.part-title { font-size: clamp(2.5rem, 7vw, 5rem); font-weight: 600; letter-spacing: -0.04em; line-height: 1; display: flex; align-items: baseline; gap: 0.25em; }
-.part-num { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 0.45em; color: #6938ef; letter-spacing: 0; }
-.part-lead { margin-top: 20px; max-width: 640px; font-size: clamp(1.15rem, 2vw, 1.4rem); line-height: 1.45; color: var(--text-2); }
-.part-after .part-title { color: #6938ef; }
-.case-section 
+.part-after .case-section 
 .pull { margin: 40px 0 8px; font-family: var(--serif); font-style: italic; font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.1; letter-spacing: -0.01em; color: var(--text); }
 .hmw { list-style: none; margin-top: 28px; }
 .hmw li { display: flex; gap: 20px; align-items: baseline; padding: 20px 0; border-top: 1px solid var(--border); font-size: clamp(1.15rem, 2vw, 1.4rem); font-weight: 500; letter-spacing: -0.015em; line-height: 1.35; }
