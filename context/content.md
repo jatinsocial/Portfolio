@@ -85,7 +85,7 @@ Not yet explained: bulk selection per card, the save-as-template flow and review
 
 ### Case study storytelling drafts (2026-11-02, agent-written, Jatin to confirm)
 - At a glance: Product SocialPilot Reviews; My role Product Designer; Scope end-to-end redesign of the Reviews Inbox; Platform Web; Status designed, awaiting development. (No timeline or team given, so none shown.)
-- How might we (drafted from the validated problems): clear a pile of reviews without opening each; show what is replied at a glance; fit more reviews without hiding the reply tools.
+- How might we: removed by Jatin (2026-11-02); do not re-add.
 - Part leads and section intros are written from the owner's point of view (the café owner from Jatin's brief); they are framing, not new facts.
 - Caption "Before: four clicks to find replied" is verified in the legacy product (Filter, Reply Status, an option, Apply).
 - The pull quote "From chaos to resolution." was removed by Jatin (2026-11-02); do not re-add it.

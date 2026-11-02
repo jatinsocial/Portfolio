@@ -37,3 +37,6 @@ Order is now Reviews Inbox, Competitor Reports, AI in Location Reports, AI Onboa
 
 ## 2026-11-02 — Case study as a before/after story
 Jatin: the case study needed storytelling and a layout like the Unacademy polls case study (two parts, Before and After). Adopted: glance row, numbered Before/After parts, How might we, before/after screenshot pairs, the café owner as the narrative thread. Ignored from that reference: iterations, memes, emoji headings.
+
+## 2026-11-02 — No How might we section
+Jatin did not want a How might we section in the case study. The Unacademy reference has one; ours goes from the legacy problems straight to What we noticed.

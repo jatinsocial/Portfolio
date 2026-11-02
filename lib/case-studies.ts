@@ -82,7 +82,7 @@ export const caseStudies: CaseStudy[] = [
         id: "before",
         title: "Before",
         lead: "Start with the owner's day: hundreds of customers, mixed reviews piling up, and an inbox that treats every one the same.",
-        sections: ["product", "problem", "legacy", "hmw", "noticed"],
+        sections: ["product", "problem", "legacy", "noticed"],
       },
       {
         id: "after",
@@ -214,16 +214,6 @@ export const caseStudies: CaseStudy[] = [
               },
             ],
           },
-        ],
-      },
-      {
-        id: "hmw",
-        title: "How might we",
-        paragraphs: ["Three questions came out of that, and they shaped everything that follows."],
-        hmw: [
-          "How might we let an owner get through a pile of reviews without opening each one?",
-          "How might we show what has been replied to, at a glance?",
-          "How might we fit more reviews on a screen without hiding the reply tools?",
         ],
       },
       {
