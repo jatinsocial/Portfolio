@@ -28,7 +28,7 @@ Centered paragraph, large secondary-color text (1.25-1.75rem). Current copy came
 - No category labels, badges, tabs or gradients.
 
 ## Philosophy quote — `.quote`
-Label "Philosophy" and a serif-italic placeholder line: "Make it obvious first. Then make it delightful." Placeholder written by the agent; awaiting Jatin's own line.
+Label "Philosophy" and a serif-italic line: "Creativity is just connecting things." (chosen by Jatin; a known Steve Jobs quote, currently unattributed).
 
 ## Journey — `#journey`
 - **Heading**: "How it all" + "started" inside a purple selection frame (2px border, four `+` corner marks), a pen-tool nib on the frame's bottom-right corner, offset outside the word so the text stays readable (orange nib pointing up-left with hole and slit, plus a separate small oval, dark outline, as in the reference). Hand-drawn SVG, `0.8em` so it scales with the title. There is deliberately no decorative arrow cursor: the only arrow on the site is the real mouse pointer (see Cursor in `design-direction.md`).

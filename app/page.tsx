@@ -78,7 +78,7 @@ export default function Home() {
           <Reveal>
             <p className="quote-label">Philosophy</p>
             <blockquote>
-              <em>&ldquo;Make it obvious first. Then make it delightful.&rdquo;</em>
+              <em>&ldquo;Creativity is just connecting things.&rdquo;</em>
             </blockquote>
           </Reveal>
         </section>

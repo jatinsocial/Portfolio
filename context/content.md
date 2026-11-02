@@ -24,7 +24,7 @@ Descriptions are agent-written placeholders based only on the facts above. Jatin
 ## Current page copy
 - **Hero**: "Hello, / I am Jatin Solanki 👋"; "Product Designer at SocialPilot"; "Based in India, designing thoughtful analytics and AI experiences. Right now I'm shaping AI Lab, an agentic layer for the SocialPilot product suite." (placeholder wording)
 - **About** (from research, applied 2026-11-01): "I'm drawn to the parts of a product people rarely praise but always feel: a reviews inbox that never makes you hunt, a report that answers the question before you ask it, an AI feature that earns trust in its first minute. My work is making those moments quietly clear for the people who rely on them every day."
-- **Quote** (placeholder): "Make it obvious first. Then make it delightful."
+- **Quote** (Jatin chose it, 2026-11-02): "Creativity is just connecting things." This is widely known as a Steve Jobs line; it is shown without attribution. Ask Jatin whether to credit it before publishing.
 - **Journey**: see `lib/journey.ts`. Notes under item cards are agent-written one-liners to be checked by Jatin.
 
 ## About-copy research summary
