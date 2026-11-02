@@ -123,7 +123,6 @@ export const caseStudies: CaseStudy[] = [
       {
         id: "legacy",
         title: "What the legacy inbox gets wrong",
-        eyebrow: "What was wrong",
         paragraphs: [
           "I used the legacy inbox the way an owner would, and the problems fall into three groups.",
         ],
