@@ -198,10 +198,11 @@ export const caseStudies: CaseStudy[] = [
           "Bulk reply was one of them. We got there by watching how people really used the inbox: they were dealing with a lot of reviews by hand.",
           "In our PM's conversations with customers, we learned that people kept their own sheet of review responses, or wrote their replies somewhere else, possibly in an AI that knew their business. None of that happened inside SocialPilot.",
           "The thinking was happening outside the product. The inbox was only where a finished reply landed.",
+          "Two ideas came out of it.",
         ],
         groups: [
           {
-            title: "Two ideas that came out of it",
+            title: "",
             figures: [],
             notes: [
               {

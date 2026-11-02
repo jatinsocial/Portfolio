@@ -131,12 +131,16 @@ function SectionView({ s }: { s: CaseSection }) {
         {s.groups?.map((g) => (
           <div key={g.title + g.figures.length + (g.figures[0]?.src ?? "")} className="problem-group">
             {g.title && <h3>{g.title}</h3>}
-            {g.notes?.map((n) => (
-              <div key={n.title} className="idea">
-                <h4>{n.title}</h4>
-                <p>{n.text}</p>
+            {g.notes && (
+              <div className="ideas">
+                {g.notes.map((n) => (
+                  <div key={n.title} className="idea">
+                    <h4>{n.title}</h4>
+                    <p>{n.text}</p>
+                  </div>
+                ))}
               </div>
-            ))}
+            )}
             {g.figures.map((f) => (
               <Annotated key={f.src} f={f} />
             ))}
