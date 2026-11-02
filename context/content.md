@@ -64,3 +64,14 @@ Design principles, key decisions (needs the new design), What's next (goals only
 "...quietly clear for the people who rely on them every day." (changed from "the teams who run social every day").
 
 Update (2026-11-01): Jatin removed the PostHog sentence from the "What we noticed" copy on the page. The PostHog finding (people pasting a reply and being done) is still true and recorded above, but is not on the page; do not re-add unless he asks. The closing line there now reads "The thinking was happening outside the product. The inbox was only where a finished reply landed."
+
+## New Reviews Inbox design, as explained by Jatin (2026-11-02; he is still explaining, details may change)
+Screens shared: five (Third Wave Coffee / TWC Jaipur demo data). Layout: left filters, middle working area, right panel with bulk reply options plus rating and AI summary.
+- Left: Status first with counts (All, Replied, Drafts, No Reply Drafted; a checkbox and an "Only" shortcut), then Ratings (5 to 1 stars, Recommends, Does not recommend), Tags, Platforms, Review Content, Sentiments as collapsible sections.
+- Middle: select-all checkbox, date range, search, sort, export. Compact cards: platform, name, age, stars, sentiment face, text; a one-line collapsed "Write a reply" row.
+- Right (when reviews without replies are shown): bulk reply options **Generate Reply, Use Templates, Custom Reply**, then average rating with trend and a goal ("Get 10 more 5 star reviews, reach 4.0 stars"), sentiment bar, themes, AI summary.
+- Top right **Send Drafts**. The AI Reply rows shown in cards (yellow bar, "AI Reply") are drafts created for **automated replies, after a confirmation rule**; Send Drafts sends them.
+- **Replied reviews** view: cards show the review (truncated, Read more) with the reply inline under a reply arrow; the right panel shows only rating and summary.
+- Hover on a card: the card icons (tag, open, copy, share, reply) and inline **Generate Reply** and **Template** actions appear. Icons are visible only on hover.
+- Clicking reply **expands the card as an overlay on top of the next review** (the list does not move). Once you type or generate a reply, **all reply options appear upfront**: Templates, Rewrite, Shorten, Expand, Grammar, Tone, plus send.
+Not yet explained: bulk selection per card, the save-as-template flow and reviewer-name custom field, how Send Drafts and the confirmation rule are configured.
