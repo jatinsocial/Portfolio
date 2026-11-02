@@ -91,7 +91,6 @@ function SectionView({ s }: { s: CaseSection }) {
   return (
     <Reveal>
       <section id={s.id} className="case-section">
-        {s.eyebrow && <p className="eyebrow">{s.eyebrow}</p>}
         {s.heading ? <SelHeading lead={s.heading.lead} word={s.heading.word} /> : <h2>{s.title}</h2>}
         {s.paragraphs.map((p, i) => (
           <p key={i}>{p}</p>
@@ -177,7 +176,6 @@ export default async function CaseStudyPage({
       <main className="case">
         <header className="case-hero">
           <Link href="/#work" className="case-back">← Back to work</Link>
-          <p className="eyebrow">Case study</p>
           <h1 className="case-title">{c.title}</h1>
           <p className="case-intro">{c.intro}</p>
 
@@ -206,7 +204,6 @@ export default async function CaseStudyPage({
           <div key={p.id} id={p.id} className={`part part-${p.id}`}>
             <Reveal>
               <div className="part-head">
-                <p className="eyebrow">{p.eyebrow}</p>
                 <h2 className="part-title">
                   <span className="part-num">{String(i + 1).padStart(2, "0")}</span>
                   {p.title}

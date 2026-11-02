@@ -32,8 +32,6 @@ export type ProblemGroup = {
 export type CaseSection = {
   id: string;
   title: string;
-  // Small label above the title, e.g. "Context".
-  eyebrow?: string;
   paragraphs: string[];
   // A large pull quote shown after the paragraphs.
   quote?: string;
@@ -51,7 +49,7 @@ export type CaseSection = {
 };
 
 // One chapter of the story. `sections` are ids from the study's sections.
-export type Part = { id: string; eyebrow: string; title: string; lead?: string; sections: string[] };
+export type Part = { id: string; title: string; lead?: string; sections: string[] };
 
 export type CaseStudy = {
   slug: string; // matches a slug in lib/projects.ts
@@ -82,21 +80,18 @@ export const caseStudies: CaseStudy[] = [
     parts: [
       {
         id: "before",
-        eyebrow: "Part one",
         title: "Before",
         lead: "Start with the owner's day: hundreds of customers, mixed reviews piling up, and an inbox that treats every one the same.",
         sections: ["product", "problem", "legacy", "hmw", "noticed"],
       },
       {
         id: "after",
-        eyebrow: "Part two",
         title: "After",
         lead: "Same owner, same pile of reviews. Here is what changed.",
         sections: ["after-overview", "after-status", "after-reply", "templates", "bulk"],
       },
       {
         id: "next-part",
-        eyebrow: "Finally",
         title: "What's next",
         sections: ["next"],
       },
@@ -105,7 +100,6 @@ export const caseStudies: CaseStudy[] = [
       {
         id: "product",
         title: "About the product",
-        eyebrow: "Context",
         paragraphs: [
           "SocialPilot Reviews is a comprehensive review and online reputation management platform designed to help local businesses and multi-location brands build loyalty, retain customers, and grow. The platform enables operators to collect, manage, and market reviews at scale across channels like Google Business Profile.",
         ],
@@ -113,7 +107,6 @@ export const caseStudies: CaseStudy[] = [
       {
         id: "problem",
         title: "Defining the problem",
-        eyebrow: "The problem",
         paragraphs: [
           "Imagine you're a business owner overseeing a bustling coffee shop at a prime location like SBR in Ahmedabad, confronted daily by an overwhelming backlog of hundreds of customers and the scattered reviews they leave on your business profile, containing mixed feedback.",
           "In this chaotic reality, the legacy reviews inbox acts as an everyday bottleneck. Instead of acting as an intelligent product that handles tedious tasks easily, it traps users in a cycle of administrative friction.",
@@ -199,7 +192,6 @@ export const caseStudies: CaseStudy[] = [
       {
         id: "noticed",
         title: "What we noticed",
-        eyebrow: "Beyond the brief",
         heading: { lead: "What we", word: "noticed" },
         paragraphs: [
           "The problems above were enough to start the revamp. But some of the best ideas were not in the problem statement at all.",
@@ -227,7 +219,6 @@ export const caseStudies: CaseStudy[] = [
       {
         id: "hmw",
         title: "How might we",
-        eyebrow: "The questions",
         paragraphs: ["Three questions came out of that, and they shaped everything that follows."],
         hmw: [
           "How might we let an owner get through a pile of reviews without opening each one?",
@@ -238,7 +229,6 @@ export const caseStudies: CaseStudy[] = [
       {
         id: "after-overview",
         title: "The new inbox, at a glance",
-        eyebrow: "The new inbox",
         paragraphs: [
           "The owner opens the new inbox and sees three columns, each with one job. On the left, filters. In the middle, the reviews. On the right, what they can do to many reviews at once, plus the rating and an AI summary.",
         ],
@@ -259,7 +249,6 @@ export const caseStudies: CaseStudy[] = [
       {
         id: "after-status",
         title: "Know what's replied, fast",
-        eyebrow: "Status",
         paragraphs: [
           "The first question is always the same: what is still waiting? Status is now the first filter, with counts, and replied reviews show their reply right on the card.",
         ],
@@ -288,7 +277,6 @@ export const caseStudies: CaseStudy[] = [
       {
         id: "after-reply",
         title: "Reply where you read",
-        eyebrow: "Replying",
         paragraphs: [
           "To answer a single review, the owner just starts. A review stays one line until it is needed. Open it and it floats over the next one, so the list never jumps. Once a reply is written or generated, every option is there.",
         ],
@@ -318,7 +306,6 @@ export const caseStudies: CaseStudy[] = [
       {
         id: "templates",
         title: "Write once, reuse",
-        eyebrow: "Templates",
         heading: { lead: "Write once,", word: "reuse" },
         paragraphs: [
           "The idea that grew out of those sheets: if someone pastes a reply they like, offer to keep it for next time.",
@@ -352,7 +339,6 @@ export const caseStudies: CaseStudy[] = [
       {
         id: "bulk",
         title: "Reply to many at once",
-        eyebrow: "Bulk reply",
         heading: { lead: "Reply to many", word: "at once" },
         paragraphs: [
           "Bulk reply works two ways, and keeps the same options as a single reply: use AI, use a template, or write a reply yourself.",
@@ -436,7 +422,6 @@ export const caseStudies: CaseStudy[] = [
       {
         id: "next",
         title: "What's next",
-        eyebrow: "What's next",
         paragraphs: [
           "The new inbox is designed and waiting for development, so there are no results to share yet.",
         ],
