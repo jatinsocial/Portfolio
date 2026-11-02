@@ -198,6 +198,73 @@ export const caseStudies: CaseStudy[] = [
               },
             ],
           },
+          {
+            title: "Bulk reply, without selecting",
+            figures: [
+              {
+                src: "/case/reviews-inbox/b1-hover.png",
+                alt: "Hovering Generate Reply shows it will target 30 unreplied reviews",
+                x: 760, y: 100, w: 680, h: 260,
+                callouts: [
+                  { title: "Hover a reply option", text: "It targets all unreplied reviews by default.", ax: 1380, ay: 138 },
+                ],
+              },
+              {
+                src: "/case/reviews-inbox/b2-working.png",
+                alt: "The reply panel working on 30 unreplied reviews",
+                x: 760, y: 100, w: 680, h: 260,
+                callouts: [
+                  { title: "It gets to work", text: "Drafts are created for every unreplied review.", ax: 1412, ay: 176 },
+                ],
+              },
+              {
+                src: "/case/reviews-inbox/b3-drafts.png",
+                alt: "30 drafts created, each review now showing a draft",
+                x: 350, y: 40, w: 1090, h: 340,
+                callouts: [
+                  { title: "30 drafts created", text: "One click, instead of 30 replies.", ax: 1400, ay: 60 },
+                  { title: "Drafts, not replies", text: "Every review now has a draft.", ax: 1105, ay: 287 },
+                ],
+              },
+            ],
+          },
+          {
+            title: "Bulk reply, with selection",
+            figures: [
+              {
+                src: "/case/reviews-inbox/c1-hover-checkbox.png",
+                alt: "A checkbox appearing on a review when hovering",
+                x: 350, y: 100, w: 810, h: 200,
+                callouts: [
+                  { title: "Hover to select", text: "The checkbox shows on hover.", ax: 407, ay: 208 },
+                ],
+              },
+              {
+                src: "/case/reviews-inbox/c2-selected.png",
+                alt: "One review selected, with a count and a select-all link",
+                x: 350, y: 100, w: 810, h: 200,
+                callouts: [
+                  { title: "It keeps count", text: "1 Review Selected, or all 100 in one click.", ax: 500, ay: 152 },
+                ],
+              },
+              {
+                src: "/case/reviews-inbox/c3-target.png",
+                alt: "Hovering Generate Reply shows it will target 20 selected reviews",
+                x: 760, y: 100, w: 680, h: 260,
+                callouts: [
+                  { title: "Hover shows the target", text: "20 Selected: it acts on your picks.", ax: 1378, ay: 138 },
+                ],
+              },
+              {
+                src: "/case/reviews-inbox/c4-refine.png",
+                alt: "The panel offering rewrite, shorten, expand, grammar and tone for 20 selected reviews",
+                x: 760, y: 100, w: 680, h: 260,
+                callouts: [
+                  { title: "Same tools as one reply", text: "Rewrite, shorten, expand, grammar, tone.", ax: 1415, ay: 176 },
+                ],
+              },
+            ],
+          },
         ],
       },
     ],
