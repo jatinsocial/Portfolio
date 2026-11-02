@@ -88,4 +88,4 @@ Not yet explained: bulk selection per card, the save-as-template flow and review
 - How might we (drafted from the validated problems): clear a pile of reviews without opening each; show what is replied at a glance; fit more reviews without hiding the reply tools.
 - Part leads and section intros are written from the owner's point of view (the café owner from Jatin's brief); they are framing, not new facts.
 - Caption "Before: four clicks to find replied" is verified in the legacy product (Filter, Reply Status, an option, Apply).
-- Pull quote "From chaos to resolution." comes from Jatin's brief.
+- The pull quote "From chaos to resolution." was removed by Jatin (2026-11-02); do not re-add it.

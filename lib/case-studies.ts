@@ -114,7 +114,6 @@ export const caseStudies: CaseStudy[] = [
         id: "problem",
         title: "Defining the problem",
         eyebrow: "The problem",
-        quote: "From chaos to resolution.",
         paragraphs: [
           "Imagine you're a business owner overseeing a bustling coffee shop at a prime location like SBR in Ahmedabad, confronted daily by an overwhelming backlog of hundreds of customers and the scattered reviews they leave on your business profile, containing mixed feedback.",
           "In this chaotic reality, the legacy reviews inbox acts as an everyday bottleneck. Instead of acting as an intelligent product that handles tedious tasks easily, it traps users in a cycle of administrative friction.",
