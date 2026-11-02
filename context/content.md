@@ -75,3 +75,9 @@ Screens shared: five (Third Wave Coffee / TWC Jaipur demo data). Layout: left fi
 - Hover on a card: the card icons (tag, open, copy, share, reply) and inline **Generate Reply** and **Template** actions appear. Icons are visible only on hover.
 - Clicking reply **expands the card as an overlay on top of the next review** (the list does not move). Once you type or generate a reply, **all reply options appear upfront**: Templates, Rewrite, Shorten, Expand, Grammar, Tone, plus send.
 Not yet explained: bulk selection per card, the save-as-template flow and reviewer-name custom field. How the confirmation rule is set up is out of scope for the case study (Jatin, 2026-11-02): do not ask about it or write it up.
+
+### Key decisions (section 6, started 2026-11-02)
+- **Save a pasted reply as a template** (done, drafted from Jatin's two flow screens): you paste a reply, a nudge appears ("You pasted a reply, Save it as Template?"), it opens the Review Reply Templates dialog (name, message, Custom Fields dropdown, Save) and the reply is saved for reuse. The reviewer's name can be a custom field replaced with the real name on each review (Jatin's idea; the dropdown contents are not shown in the screen).
+- **Bulk reply happens in two ways (Jatin, 2026-11-02): without selection, and with selection.** Details not yet given; do not guess what each means. Bulk reply offers the same options as a single reply: AI, templates, or a custom reply written by hand.
+- Bulk reply, **without selection** (Jatin, 2026-11-02, from a hover screen): hovering a reply option in the right panel (Generate Reply, Use Templates, Custom Reply) shows a chip such as "30 Unreplied" and by default targets the unreplied reviews. The 30 matches the "No Reply Drafted" count in the Status filter. What happens after the click (drafts created, then Send Drafts?) is not yet confirmed.
+- Bulk reply, **with selection**: not yet explained.

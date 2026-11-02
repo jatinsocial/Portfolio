@@ -169,6 +169,37 @@ export const caseStudies: CaseStudy[] = [
           },
         ],
       },
+      {
+        id: "decisions",
+        title: "Key decisions",
+        heading: { lead: "Key", word: "decisions" },
+        paragraphs: [],
+        groups: [
+          {
+            title: "Save a pasted reply as a template",
+            figures: [
+              {
+                src: "/case/reviews-inbox/n1-nudge.png",
+                alt: "A pasted reply in the new inbox with a nudge to save it as a template",
+                x: 350, y: 150, w: 810, h: 250,
+                callouts: [
+                  { title: "You paste a reply", text: "Written elsewhere, dropped into the box.", ax: 840, ay: 303, cy: 262 },
+                  { title: "We nudge you", text: "\"Save it as Template?\" appears right there.", ax: 540, ay: 321, cy: 345, g: 2 },
+                ],
+              },
+              {
+                src: "/case/reviews-inbox/n2-template.png",
+                alt: "The Review Reply Templates dialog with the pasted reply filled in",
+                x: 695, y: 110, w: 955, h: 330,
+                callouts: [
+                  { title: "You save it", text: "As a template, for reuse.", ax: 1185, ay: 192 },
+                  { title: "Custom fields", text: "The reviewer's name fills in on each review.", ax: 940, ay: 397 },
+                ],
+              },
+            ],
+          },
+        ],
+      },
     ],
   },
 ];

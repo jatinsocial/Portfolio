@@ -6,6 +6,7 @@ Last updated: 2026-11-01. Move items between sections as status changes; never d
 - Reviews Inbox case study: sections 1-3 done (About the product, Defining the problem, What the legacy inbox gets wrong with annotated screenshots). "What we noticed" drafted from Jatin's account (customer conversations plus PostHog sessions). Next: design principles, key decisions (needs Jatin's new design), What's next (goals only; the new inbox is not in dev). Other four case studies not started.
 
 ## Waiting on Jatin (input needed)
+- [ ] Bulk reply flows: explain "without selection" and "with selection" and share the screens (key decisions, section 6). The save-as-template flow is already on the page.
 - [ ] New inbox design (screenshots, or a Figma link after authorising the Figma connector in `/mcp`) to write the key decisions.
 - [ ] Source of the claim that users struggle to filter replied reviews (customer conversations and PostHog are the sources for the template and bulk ideas, not necessarily this).
 - [ ] Confirm wording of the "What we noticed" section, and whether to add the hardest-to-pull-off and competitor remarks there or in key decisions.
