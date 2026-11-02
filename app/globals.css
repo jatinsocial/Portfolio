@@ -331,7 +331,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 
 /* Legacy screenshot and problem rows: each problem sits next to a zoomed crop with an outline */
 .problem-group { margin-top: 64px; }
-.problem-group h3 { font-size: 1.0625rem; font-weight: 600; letter-spacing: -0.01em; padding-bottom: 12px; border-bottom: 1px solid var(--border); margin-bottom: 8px; }
+.problem-group h3 { font-size: clamp(1.375rem, 2.6vw, 1.75rem); font-weight: 600; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 8px; }
 
 /* Annotated screenshot: dots on the screen, thin lines out to short notes (desktop). Stacks on small screens. */
 .anno { position: relative; margin-top: 40px; }
@@ -365,12 +365,11 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 /* Selection-frame heading inside a case study: smaller gap below, text follows */
 .case-section .work-heading { margin-bottom: 24px; }
 
-/* Ideas without a screenshot yet: two quiet cards under the section text, smaller than the section title */
-.ideas { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 28px; }
-.idea { padding: 20px 22px; border-radius: 16px; background: var(--bg-2); border: 1px solid var(--border); }
-.idea h4 { font-size: 1rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.35; }
-.idea p { margin-top: 8px; font-size: 0.9375rem; line-height: 1.55; color: var(--text-2); max-width: none; }
-@media (max-width: 859px) { .ideas { grid-template-columns: 1fr; } }
+/* Ideas without a screenshot yet: plain text under a subsection title, quieter than that title */
+.ideas { display: grid; gap: 28px; margin-top: 24px; }
+.idea { padding-left: 20px; border-left: 2px solid #6938ef; }
+.idea h4 { font-size: 1.0625rem; font-weight: 600; letter-spacing: -0.01em; line-height: 1.35; }
+.idea p { margin-top: 6px; font-size: 1rem; line-height: 1.65; color: var(--text-2); max-width: 680px; }
 
 /* Case study: hero, parts, story blocks */
 .case-hero { padding-bottom: 24px; }
