@@ -219,6 +219,7 @@ export const caseStudies: CaseStudy[] = [
       {
         id: "after-overview",
         title: "The new inbox, at a glance",
+        heading: { lead: "The new inbox,", word: "at a glance" },
         paragraphs: [
           "The owner opens the new inbox and sees three columns, each with one job. On the left, filters. In the middle, the reviews. On the right, what they can do to many reviews at once, plus the rating and an AI summary.",
         ],
