@@ -393,7 +393,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .hmw { list-style: none; margin-top: 28px; }
 .hmw li { display: flex; gap: 20px; align-items: baseline; padding: 20px 0; border-top: 1px solid var(--border); font-size: clamp(1.15rem, 2vw, 1.4rem); font-weight: 500; letter-spacing: -0.015em; line-height: 1.35; }
 .hmw li:last-child { border-bottom: 1px solid var(--border); }
-.hmw li span { flex: none; font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 1rem; color: #6938ef; letter-spacing: 0; }
+.hmw li span { flex: none; font-weight: 600; font-size: 0.9375rem; color: #6938ef; letter-spacing: 0; font-variant-numeric: tabular-nums; }
 
 .compare { margin-top: 40px; }
 .compare-head h3 { font-size: 1.125rem; font-weight: 600; letter-spacing: -0.015em; }
